@@ -1,0 +1,26 @@
+{
+  "name": "obelisk",
+  "version": "1.0.0",
+  "description": "obelisk front-end components",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fancyqin/obelisk.git"
+  },
+  "keywords": [
+    "css",
+    "js",
+    "components"
+  ],
+  "author": "QF",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fancyqin/obelisk/issues"
+  },
+  "homepage": "https://github.com/fancyqin/obelisk#readme",
+  "devDependencies": {
+  }
+}

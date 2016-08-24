@@ -1,0 +1,374 @@
+@charset "utf-8";
+.dlg-dialog {
+  background: #fff;
+  // border-radius: 3px;
+  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.3);
+  ::-webkit-scrollbar {
+    width: 12px;
+    background: #dae0e6;
+    padding: 1px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 10px;
+    border-right: 1px solid #dae0e6;
+  }
+}
+
+.dlg-outer {
+  text-align: left;
+}
+
+.dlg-header {
+  // width: 100%;
+  // *min-width: 100%;
+  *zoom: 1;
+}
+
+.dlg-titlebar {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  // *min-width: 100%;
+  *zoom: 1;
+}
+
+// dialog 标题
+.dlg-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 40px;
+  *min-width: 760px;
+  line-height: 40px;
+  font-size: 14px;
+  padding: 0 20px;
+  font-weight: bold;
+  color: #222;
+  background-color: #f5f7fa;
+  // border-radius: 3px 3px 0 0;
+  border-bottom: 1px solid #e6ecf2;
+  *zoom: 1;
+}
+
+// dialog 关闭按钮
+.dlg-close {
+  display: block;
+  position: absolute;
+  text-decoration: none;
+  outline: none;
+  _cursor: pointer;
+  padding: 0;
+  top: 0px;
+  right: 0px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  z-index: 1;
+  border-radius: 0 3px 3px 0;
+  font-size: 0;
+  line-height: 0;
+  cursor: pointer;
+  .micon {
+    line-height: 40px;
+    margin: 0;
+    opacity: .5;
+  }
+  &:hover .micon {
+    opacity: 1;
+  }
+}
+
+.dlg-icon {
+  vertical-align: middle;
+  div {
+    width: 48px;
+    height: 48px;
+    margin: 10px 0 10px 10px;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+}
+
+.dlg-main {
+  min-width: 300px;
+  // min-width:0\9/*IE8 BUG*/;
+  max-width: 800px;
+  min-height: 90px;
+  position: relative;
+}
+
+// dialog 主体内容
+.dlg-content {
+  @include clearfix;
+  border: none 0;
+  padding: 20px;
+  position: relative;
+  &.dlg-state-full {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0 !important;
+    height: 100%;
+  }
+}
+
+// dialog 内容 loading 
+.dlg-loadding {
+  min-width: 300px;
+  min-height: 200px;
+  text-align: center;
+  text-indent: -999em;
+  overflow: hidden;
+  background: url(/common/img/dialog/2.0/icon/loading.gif) no-repeat center center;
+}
+
+.dlg-footer {
+  height: 50px;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  background: #f5f7fa;
+  border-top: 1px solid #e6ecf2;
+}
+
+// dialog 按钮组
+.dlg-buttons {
+  text-align: right;
+  white-space: nowrap;
+  border-radius: 0 0 3px 3px;
+  button {
+    margin-left: 10px;
+  }
+}
+
+.dlg-inner {
+  background: #fff;
+}
+
+// dialog右下角拖拽
+.dlg-se {
+  display: none;
+  position: absolute;
+  right: 0;
+  width: 6px;
+  height: 6px;
+  background: #3d4b66;
+  border-radius: 0 0 3px 0;
+}
+
+// diaolog无title
+.dlg-state-notitle {
+  .dlg-title {
+    display: none;
+  }
+  .dlg-se {
+    width: 3px;
+    height: 3px;
+    background: none !important;
+  }
+  .dlg-inner {
+    background: none;
+  }
+  .dlg-outer {
+    border: none 0;
+  }
+  .dlg-titlebar {
+    bottom: 0;
+    _bottom: 0;
+    _margin-top: 0;
+    z-index: 5;
+    @extend %clearfix;
+  }
+  .dlg-close {
+    position: static;
+    float: right;
+    width: 30px;
+    height: 30px;
+    margin-bottom: -20px;
+    background-position: -5px -5px;
+    &:hover {
+      background-position: -5px -45px;
+    }
+    // top: 5px;
+    // right: 5px;
+    // @include inline-block;
+    // width: 10px;
+    // height: 10px;
+    // background: url(/common/img/dialog/2.0/bg-ico.png) no-repeat;
+    // background-position: -78px -132px;
+    // font-size: 0;
+    // line-height: 0;
+    // z-index: 5;
+    // zoom: 1;
+    // &:hover,
+    // &:active {
+    //     text-decoration: none;
+    //     color: #000;
+    // }
+  }
+  .dlg-result {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    .msg {
+      p {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+// dialog状态锁定
+.dlg-state-lock {
+  .dlg-se {
+    background: #333;
+    background: #333\9 !important
+  }
+}
+
+// dialog 内容刷新 内部的内部 loading
+.dialog-loading {
+  background: url(/common/img/icon/loading.gif) no-repeat center center;
+  width: 100%;
+  height: 100%;
+  min-width: 500px;
+  min-height: 350px;
+  position: relative;
+  .dialog-loading-text {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    top: 50%;
+    margin-top: -60px;
+  }
+}
+
+// dialog 遮罩刷新
+.dialog-refresh {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, .7);
+  .content {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    margin-top: -15px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .btn {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+  }
+}
+
+// dialog confirm
+// 三种状态 system success wrong
+// 新加 alert
+.dialog-confirm {
+  text-align: center;
+  @include clearfix;
+  width: 360px;
+  margin: 10px auto 10px;
+  .ico {
+    @include inline-block;
+    //float: left;
+    width: 44px;
+    height: 44px;
+    font-size: 0px;
+    line-height: 0;
+    //margin-left: 20px;
+    background: url(/common/img/dialog/2.0/bg-ico.png) no-repeat;
+    background-position: 0 -44px;
+  }
+  .cnt {
+    //margin-left: 80px;
+    overflow: hidden;
+    padding-top: 12px;
+    font-size: 14px;
+    p {
+      margin-top: 0;
+    }
+  }
+  &.confirm-system {
+    .ico {
+      background-position: 0 -44px;
+    }
+  }
+  &.confirm-succ {
+    .ico {
+      background-position: 0 0px;
+    }
+  }
+  &.confirm-wrong {
+    .ico {
+      background-position: 0 -88px;
+    }
+  }
+  &.confirm-alert {
+    .ico {
+      background: url(/common/img/dialog/2.0/icon-warn-48.png) no-repeat;
+      background-position: 0 0;
+      width: 48px;
+      height: 48px;
+    }
+  }
+}
+
+// 返回结果的四种状态
+.dlg-result {
+  padding-top: 0;
+  padding-bottom: 0;
+  .state {
+    text-align: center;
+    height: 48px;
+    margin-bottom: 10px;
+    .micon {
+      font-size: 48px;
+      margin-right: 0px;
+      &.succ {
+        color: #00cc00;
+      }
+      &.error {
+        color: #e62e2e;
+      }
+      &.warning {
+        color: #f89406;
+      }
+      &.info {
+        color: #1793e6;
+      }
+    }
+  }
+  .msg {
+    margin-top: 0px;
+    font-size: 14px;
+    color: #222;
+    text-align: center;
+    p {
+      margin-top: 0;
+      margin-bottom: 0px;
+    }
+  }
+}
+
+// 文本排版
+.dlg-text {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  p {
+    font-size: 14px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}

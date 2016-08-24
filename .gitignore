@@ -3,3 +3,4 @@ node_modules/
 *.map
 npm-debug.log
 dist/
+.sass-cache/

@@ -1,0 +1,19 @@
+$scrollbar-color-white: #fff;
+$scrollbar-color: #ccc;
+$scrollbar-color-hover: #7f7f7f;
+
+*::-webkit-scrollbar {
+	width: 12px;
+	background: $scrollbar-color-white;
+}
+
+*::-webkit-scrollbar-thumb {
+	background: $scrollbar-color;
+	border-radius: 5px;
+	border-right: 2px solid $scrollbar-color-white;
+	border-left: 2px solid $scrollbar-color-white;
+
+	&:hover{
+		background: $scrollbar-color-hover;
+	}
+}

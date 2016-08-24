@@ -1,0 +1,10 @@
+@mixin inline-block($valign:middle) {
+    display: inline-block;
+    vertical-align: $valign;
+    *vertical-align: $valign;
+    *display: inline;
+    *zoom:1;
+}
+%inline-block{
+    @include inline-block;
+}

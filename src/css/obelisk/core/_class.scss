@@ -1,0 +1,150 @@
+// Clearfix
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+.cf {
+  @extend %clearfix;
+}
+
+// Layout
+.grid {
+  @extend %clearfix;
+  width: 990px;
+  margin: 0 auto;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.c {
+  text-align: center;
+}
+
+.l {
+  text-align: left;
+}
+
+.r {
+  text-align: right;
+}
+
+// Headers
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-weight: bold;
+}
+
+.h1 {
+  font-size: 24px;
+}
+
+.h2 {
+  font-size: 18px;
+}
+
+.h3 {
+  font-size: 14px;
+}
+
+.h4, .h5, .h6 {
+  font-size: 12px;
+}
+
+// Line Height
+.lh15 {
+  line-height: 1.5;
+}
+
+.lh17 {
+  line-height: 1.7;
+}
+
+// Margin
+// Use these classes only when needed
+.mt5 {
+  margin-top: 5px;
+}
+
+.mt10 {
+  margin-top: 10px;
+}
+
+.mt15 {
+  margin-top: 15px;
+}
+
+.mt20 {
+  margin-top: 20px;
+}
+
+.mb5 {
+  margin-bottom: 5px;
+}
+
+.mb10 {
+  margin-bottom: 10px;
+}
+
+.mb15 {
+  margin-bottom: 15px;
+}
+
+.mb20 {
+  margin-bottom: 20px;
+}
+
+// Margin vertical
+.mv5 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.mv10 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.mv15 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.mv20 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+// Colors
+.gray {
+  color: #555;
+}
+
+.gray-light {
+  color: #888;
+}
+
+.bfc {
+  overflow: hidden;
+  zoom: 1;
+}
+
+.ellipsis {
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.full-width {
+  width: 100%;
+}

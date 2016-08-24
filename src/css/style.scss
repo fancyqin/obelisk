@@ -1,0 +1,44 @@
+@import "obelisk/base";
+@import "obelisk/mixin/center";
+@import "obelisk/mixin/grid";
+@import "obelisk/mixin/layout";
+@import "obelisk/lib/button";
+@import "obelisk/lib/flag";
+@import "obelisk/lib/input";
+@import "obelisk/lib/select";
+@import "obelisk/module/calendar";
+@import "obelisk/module/dialog";
+@import "obelisk/module/flags";
+@import "obelisk/module/form";
+@import "obelisk/module/pager";
+@import "obelisk/module/scrollbar";
+@import "obelisk/module/step";
+@import "obelisk/module/table";
+@import "obelisk/module/tag";
+
+
+
+.obelisk{
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 990px;
+    font-family: 'Microsoft Yahei',sans-serif;
+    padding: 40px;
+    h2{
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+    h3{
+        font-size: 24px;
+    }
+    p{
+
+    }
+    h4{
+        font-size: 18px;
+    }
+    h5{
+        font-size: 14px;
+    }
+
+}

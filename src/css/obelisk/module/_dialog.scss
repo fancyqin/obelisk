@@ -1,4 +1,4 @@
-@charset "utf-8";
+
 .dlg-dialog {
   background: #fff;
   // border-radius: 3px;
@@ -52,32 +52,28 @@
 
 // dialog 关闭按钮
 .dlg-close {
-  display: block;
-  position: absolute;
-  text-decoration: none;
-  outline: none;
-  _cursor: pointer;
-  padding: 0;
-  top: 0px;
-  right: 0px;
-  width: 40px;
-  height: 40px;
-  text-align: center;
-  line-height: 40px;
-  z-index: 1;
-  border-radius: 0 3px 3px 0;
-  font-size: 0;
-  line-height: 0;
-  cursor: pointer;
-  .micon {
-    line-height: 40px;
-    margin: 0;
-    opacity: .5;
-  }
-  &:hover .micon {
-    opacity: 1;
-  }
+    display: block;
+    position: absolute;
+    text-decoration: none;
+    outline: none;
+    _cursor: pointer;
+    padding: 0;
+    top: 0px;
+    right: 0px;
+    width: 40px;
+    height: 40px;
+    z-index: 1;
+    border-radius: 0 3px 3px 0;
+	  background: url(/miracle/img/dlg-close.png) no-repeat;
+    background-position: 0 0px;
+    font-size: 0;
+    line-height: 0;
+    cursor: pointer;
+    &:hover {
+        background-position: 0 -40px;
+    }
 }
+
 
 .dlg-icon {
   vertical-align: middle;
@@ -125,6 +121,7 @@
 
 .dlg-footer {
   height: 50px;
+  *height: auto;
   padding: 10px 15px;
   box-sizing: border-box;
   background: #f5f7fa;

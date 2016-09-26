@@ -1,6 +1,8 @@
-@import "mixin/_common";
-@import "core/_var";
-@import "core/_font";
-@import "core/_reset";
-@import "core/_grid";
-@import "core/_class";
+@import "$${path.common}/obelisk/mixin/_common";
+@import "$${path.common}/obelisk/core/_var";
+@import "$${path.common}/obelisk/core/_font";
+@import "$${path.common}/obelisk/core/_font-icon";
+@import "$${path.common}/obelisk/core/_reset";
+@import "$${path.common}/obelisk/core/_grid";
+@import "$${path.common}/obelisk/mixin/_layout";
+@import "$${path.common}/obelisk/core/_class";

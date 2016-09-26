@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import "$${path.common}/obelisk/core/_var";
+@import "$${path.common}/obelisk/mixin/_layout";
 
 // font-size & color definition
 $fontSize: 12px;

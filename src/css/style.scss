@@ -1,20 +1,20 @@
-@import "common/obelisk/base";
-@import "common/obelisk/mixin/center";
-@import "common/obelisk/mixin/grid";
-@import "common/obelisk/mixin/layout";
-@import "common/obelisk/lib/button";
-@import "common/obelisk/lib/flag";
-@import "common/obelisk/lib/input";
-@import "common/obelisk/lib/select";
-@import "common/obelisk/module/calendar";
-@import "common/obelisk/module/dialog";
-@import "common/obelisk/module/flags";
-@import "common/obelisk/module/form";
-@import "common/obelisk/module/pager";
-@import "common/obelisk/module/scrollbar";
-@import "common/obelisk/module/step";
-@import "common/obelisk/module/table";
-@import "common/obelisk/module/tag";
+@import "../common/obelisk/base";
+@import "../common/obelisk/mixin/center";
+@import "../common/obelisk/mixin/grid";
+@import "../common/obelisk/mixin/layout";
+@import "../common/obelisk/lib/button";
+@import "../common/obelisk/lib/flag";
+@import "../common/obelisk/lib/input";
+@import "../common/obelisk/lib/select";
+@import "../common/obelisk/module/calendar";
+@import "../common/obelisk/module/dialog";
+@import "../common/obelisk/module/flags";
+@import "../common/obelisk/module/form";
+@import "../common/obelisk/module/pager";
+@import "../common/obelisk/module/scrollbar";
+@import "../common/obelisk/module/step";
+@import "../common/obelisk/module/table";
+@import "../common/obelisk/module/tag";
 
 
 
@@ -33,9 +33,6 @@
     > h3{
         font-size: 24px;
         margin: 10px 0;
-    }
-    > p{
-
     }
     > h4{
         font-size: 18px;

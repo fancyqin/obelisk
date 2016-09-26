@@ -1,38 +1,23 @@
 /*
-Error: File to import not found or unreadable: /common/font/Roboto/_font.
-        on line 1 of src/css/obelisk/core/_font.scss
-        from line 3 of src/css/obelisk/_base.scss
+Error: File to import not found or unreadable: common/obelisk/mixin/_common.
+        on line 1 of src/common/obelisk/_base.scss
         from line 1 of src/css/style.scss
 
-1: @import "obelisk/base";
-2: @import "obelisk/mixin/center";
-3: @import "obelisk/mixin/grid";
-4: @import "obelisk/mixin/layout";
-5: @import "obelisk/lib/button";
-6: @import "obelisk/lib/flag";
+1: @import "../common/obelisk/base";
+2: @import "../common/obelisk/mixin/center";
+3: @import "../common/obelisk/mixin/grid";
+4: @import "../common/obelisk/mixin/layout";
+5: @import "../common/obelisk/lib/button";
+6: @import "../common/obelisk/lib/flag";
 
 Backtrace:
-src/css/obelisk/core/_font.scss:1
-src/css/obelisk/_base.scss:3
+src/common/obelisk/_base.scss:1
 src/css/style.scss:1
 C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/import_node.rb:67:in `rescue in import'
 C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/import_node.rb:45:in `import'
 C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/import_node.rb:28:in `imported_file'
 C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/import_node.rb:37:in `css_import?'
 C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:311:in `visit_import'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/stack.rb:115:in `with_frame'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:158:in `visit'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:326:in `block (2 levels) in visit_import'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:326:in `map'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:326:in `block in visit_import'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/stack.rb:88:in `block in with_import'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/stack.rb:115:in `with_frame'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/stack.rb:88:in `with_import'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:323:in `visit_import'
 C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:36:in `visit'
 C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
 C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/stack.rb:79:in `block in with_base'
@@ -83,4 +68,4 @@ C:/Ruby22/bin/sass:23:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: /common/font/Roboto/_font.\A         on line 1 of src/css/obelisk/core/_font.scss\A         from line 3 of src/css/obelisk/_base.scss\A         from line 1 of src/css/style.scss\A \A 1: @import \"obelisk/base\";\A 2: @import \"obelisk/mixin/center\";\A 3: @import \"obelisk/mixin/grid\";\A 4: @import \"obelisk/mixin/layout\";\A 5: @import \"obelisk/lib/button\";\A 6: @import \"obelisk/lib/flag\";"; }
+  content: "Error: File to import not found or unreadable: common/obelisk/mixin/_common.\A         on line 1 of src/common/obelisk/_base.scss\A         from line 1 of src/css/style.scss\A \A 1: @import \"../common/obelisk/base\";\A 2: @import \"../common/obelisk/mixin/center\";\A 3: @import \"../common/obelisk/mixin/grid\";\A 4: @import \"../common/obelisk/mixin/layout\";\A 5: @import \"../common/obelisk/lib/button\";\A 6: @import \"../common/obelisk/lib/flag\";"; }

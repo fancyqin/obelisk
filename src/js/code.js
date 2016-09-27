@@ -26,6 +26,9 @@ if (!Array.prototype.forEach){
 
 (function(){
 
+    
+    
+
     //highlight
     qsa('.J-highlight').forEach(function(el){
         highlight(el, {
@@ -37,7 +40,7 @@ if (!Array.prototype.forEach){
         });
     });
 
-    //ace
+    //ace & clip
     qsa('.J-sample').forEach(function(el){
         var box = el.querySelectorAll('.J-sampleBox')[0];
         var code = el.querySelectorAll('.J-sampleCode')[0];
@@ -54,14 +57,20 @@ if (!Array.prototype.forEach){
         editor.$blockScrolling = Infinity;
 
         editor.setValue(box.innerHTML);
-        copy.setAttribute('data-clipboard-text','error');
 
+        //clip
+        copy.setAttribute('data-clipboard-text','error');
         var clip = new Clipboard(copy,{
             text: function(){
                 return box.innerHTML;
             }
         });
-                
+
+        clip.on('success',function(e){
+            
+        });
+
+        //change        
         session.on('change',function(){
             box.innerHTML = editor.getValue();
             clip.text = function(){

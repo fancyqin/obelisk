@@ -1,68 +1,46 @@
-/*
-Error: Invalid GBK character "\xE5"
-        on line 1 of src/common/obelisk/lib/_input.scss
-        from line 7 of src/css/style.scss
+.obelisk {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 990px;
+  font-family: 'Microsoft Yahei',sans-serif;
+  padding: 40px; }
+  .obelisk > h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd; }
+  .obelisk > h3 {
+    font-size: 24px;
+    margin: 10px 0; }
+  .obelisk > h4 {
+    font-size: 18px;
+    margin: 10px 0; }
+  .obelisk h5 {
+    font-size: 14px;
+    margin: 10px 0;
+    text-indent: 1em; }
+  .obelisk .highlight {
+    margin: 20px 0; }
+  .obelisk .sample {
+    margin: 20px 0; }
+  .obelisk .sample-block {
+    margin-bottom: 30px; }
+  .obelisk .tips {
+    border: 1px dashed #ddd;
+    background: #f3f5f7;
+    padding: 20px;
+    line-height: 2; }
+  .obelisk .copy button {
+    float: right;
+    height: 24px;
+    line-height: 24px;
+    border: 1px solid #2F3129;
+    border-bottom: 0;
+    padding: 0 10px;
+    margin-top: -20px; }
 
-1: //兼容ie8
-2: @mixin max-screen($res) {
-3:     @media only screen and (max-width: $res) {
-4:         @content;
-5:     }
-6: }
 
-Backtrace:
-src/common/obelisk/lib/_input.scss:1
-src/css/style.scss:7
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/util.rb:1299:in `rescue in block in find_encoding_error'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/util.rb:1296:in `block in find_encoding_error'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/util.rb:1295:in `each'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/util.rb:1295:in `each_with_index'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/util.rb:1295:in `find_encoding_error'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/util.rb:910:in `rescue in check_sass_encoding'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/util.rb:906:in `check_sass_encoding'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/engine.rb:433:in `check_encoding!'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/engine.rb:389:in `_to_tree'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/engine.rb:309:in `to_tree'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:324:in `block in visit_import'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/stack.rb:88:in `block in with_import'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/stack.rb:115:in `with_frame'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/stack.rb:88:in `with_import'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:323:in `visit_import'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/stack.rb:115:in `with_frame'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:158:in `visit'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:52:in `map'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:157:in `visit'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:8:in `visit'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/root_node.rb:36:in `css_tree'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/engine.rb:378:in `_render_with_sourcemap'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/engine.rb:295:in `render_with_sourcemap'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:209:in `each'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/plugin.rb:82:in `update_stylesheets'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/exec/sass_scss.rb:363:in `watch_or_update'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/exec/sass_scss.rb:51:in `process_result'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/exec/base.rb:52:in `parse'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/exec/base.rb:19:in `parse!'
-C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.21/bin/sass:13:in `<top (required)>'
-C:/Ruby22/bin/sass:23:in `load'
-C:/Ruby22/bin/sass:23:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid GBK character \"\xE5\"\A         on line 1 of src/common/obelisk/lib/_input.scss\A         from line 7 of src/css/style.scss\A \A 1: //兼容ie8\A 2: @mixin max-screen($res) {\A 3:     @media only screen and (max-width: $res) {\A 4:         @content;\A 5:     }\A 6: }"; }
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBQ0EsUUFBUTtFQUNKLFVBQVUsRUFBRSxVQUFVO0VBQ3RCLEtBQUssRUFBRSxJQUFJO0VBQ1gsU0FBUyxFQUFFLEtBQUs7RUFDaEIsV0FBVyxFQUFFLDRCQUE0QjtFQUN6QyxPQUFPLEVBQUUsSUFBSTtFQUNiLGFBQUk7SUFDQSxTQUFTLEVBQUUsSUFBSTtJQUNmLGFBQWEsRUFBRSxJQUFJO0lBQ25CLGNBQWMsRUFBRSxJQUFJO0lBQ3BCLGFBQWEsRUFBRSxjQUFjO0VBRWpDLGFBQUk7SUFDQSxTQUFTLEVBQUUsSUFBSTtJQUNmLE1BQU0sRUFBRSxNQUFNO0VBRWxCLGFBQUk7SUFDQSxTQUFTLEVBQUUsSUFBSTtJQUNmLE1BQU0sRUFBRSxNQUFNO0VBRWxCLFdBQUU7SUFDRSxTQUFTLEVBQUUsSUFBSTtJQUNmLE1BQU0sRUFBRSxNQUFNO0lBQ2QsV0FBVyxFQUFFLEdBQUc7RUFFcEIsbUJBQVU7SUFDTixNQUFNLEVBQUUsTUFBTTtFQUVsQixnQkFBTztJQUNILE1BQU0sRUFBRSxNQUFNO0VBRWxCLHNCQUFhO0lBQ1QsYUFBYSxFQUFFLElBQUk7RUFFdkIsY0FBSztJQUNELE1BQU0sRUFBRSxlQUFlO0lBQ3ZCLFVBQVUsRUFBRSxPQUFPO0lBQ25CLE9BQU8sRUFBRSxJQUFJO0lBQ2IsV0FBVyxFQUFFLENBQUM7RUFHZCxxQkFBTTtJQUNGLEtBQUssRUFBRSxLQUFLO0lBQ1osTUFBTSxFQUFFLElBQUk7SUFDWixXQUFXLEVBQUUsSUFBSTtJQUNqQixNQUFNLEVBQUUsaUJBQWlCO0lBQ3pCLGFBQWEsRUFBRSxDQUFDO0lBQ2hCLE9BQU8sRUFBRSxNQUFNO0lBQ2YsVUFBVSxFQUFFLEtBQUsiLCJzb3VyY2VzIjpbInN0eWxlLnNjc3MiXSwibmFtZXMiOltdLCJmaWxlIjoic3R5bGUuY3NzIiwic291cmNlUm9vdCI6Ii9zb3VyY2UvIiwic291cmNlc0NvbnRlbnQiOlsiXHJcbi5vYmVsaXNre1xyXG4gICAgYm94LXNpemluZzogYm9yZGVyLWJveDtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgbWluLXdpZHRoOiA5OTBweDtcclxuICAgIGZvbnQtZmFtaWx5OiAnTWljcm9zb2Z0IFlhaGVpJyxzYW5zLXNlcmlmO1xyXG4gICAgcGFkZGluZzogNDBweDtcclxuICAgID4gaDJ7XHJcbiAgICAgICAgZm9udC1zaXplOiAzMnB4O1xyXG4gICAgICAgIG1hcmdpbi1ib3R0b206IDIwcHg7XHJcbiAgICAgICAgcGFkZGluZy1ib3R0b206IDEwcHg7XHJcbiAgICAgICAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkICNkZGQ7XHJcbiAgICB9XHJcbiAgICA+IGgze1xyXG4gICAgICAgIGZvbnQtc2l6ZTogMjRweDtcclxuICAgICAgICBtYXJnaW46IDEwcHggMDtcclxuICAgIH1cclxuICAgID4gaDR7XHJcbiAgICAgICAgZm9udC1zaXplOiAxOHB4O1xyXG4gICAgICAgIG1hcmdpbjogMTBweCAwO1xyXG4gICAgfVxyXG4gICAgaDV7XHJcbiAgICAgICAgZm9udC1zaXplOiAxNHB4O1xyXG4gICAgICAgIG1hcmdpbjogMTBweCAwO1xyXG4gICAgICAgIHRleHQtaW5kZW50OiAxZW07XHJcbiAgICB9XHJcbiAgICAuaGlnaGxpZ2h0e1xyXG4gICAgICAgIG1hcmdpbjogMjBweCAwO1xyXG4gICAgfVxyXG4gICAgLnNhbXBsZXtcclxuICAgICAgICBtYXJnaW46IDIwcHggMDtcclxuICAgIH1cclxuICAgIC5zYW1wbGUtYmxvY2t7XHJcbiAgICAgICAgbWFyZ2luLWJvdHRvbTogMzBweDtcclxuICAgIH1cclxuICAgIC50aXBze1xyXG4gICAgICAgIGJvcmRlcjogMXB4IGRhc2hlZCAjZGRkO1xyXG4gICAgICAgIGJhY2tncm91bmQ6ICNmM2Y1Zjc7XHJcbiAgICAgICAgcGFkZGluZzogMjBweDtcclxuICAgICAgICBsaW5lLWhlaWdodDogMjtcclxuICAgIH1cclxuICAgIC5jb3B5e1xyXG4gICAgICAgIGJ1dHRvbntcclxuICAgICAgICAgICAgZmxvYXQ6IHJpZ2h0O1xyXG4gICAgICAgICAgICBoZWlnaHQ6IDI0cHg7XHJcbiAgICAgICAgICAgIGxpbmUtaGVpZ2h0OiAyNHB4O1xyXG4gICAgICAgICAgICBib3JkZXI6IDFweCBzb2xpZCAjMkYzMTI5O1xyXG4gICAgICAgICAgICBib3JkZXItYm90dG9tOiAwO1xyXG4gICAgICAgICAgICBwYWRkaW5nOiAwIDEwcHg7XHJcbiAgICAgICAgICAgIG1hcmdpbi10b3A6IC0yMHB4O1xyXG4gICAgICAgIH1cclxuICAgIH1cclxufVxyXG4iXX0= */
+
+/*# sourceMappingURL=maps/style.css.map */

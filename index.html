@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <link rel="stylesheet" href="http://www.micstatic.com/gb/out/demo.css">
     <link rel="stylesheet" href="src/css/style.css">
-
-    <link rel="stylesheet" href="src/js/asset/highlight/styles/dracula.css">
 </head>
 <body>
 	
 	<div class="obelisk">
 		<h2>表格</h2>
         <h3>引用</h3>
-        <div class="highlight J-highlight" ace-mode="ace/mode/sass" ace-theme="ace/theme/tomorrow" ace-gutter="true">
+        <div class="highlight J-highlight" ace-mode="ace/mode/sass" ace-theme="ace/theme/monokai" ace-gutter="true">
 @import "/common/obelisk/module/_table";
 or
 @import "$${path.common}/obelisk/module/_table.scss";
@@ -53,7 +52,8 @@ or
 </table>
             </div>
             <h5>Code</h5>
-            <pre class="J-sampleCode" id="J-code" style="width:100%;height: 50px;"></pre>
+            <div class="copy"><button class="J-copy">copy</button></div>
+            <pre class="J-sampleCode" id="code-1" style="width:100%;height: 50px;"></pre>
         </div>
 
         <h4>一般表格</h4>
@@ -91,7 +91,50 @@ or
 </table>
             </div>
             <h5>Code</h5>
-            <pre class="J-sampleCode" id="fejklfe" style="width:100%;height: 50px;"></pre>
+            <div class="copy"><button class="J-copy">copy</button></div>
+            <pre class="J-sampleCode" id="code-2" style="width:100%;height: 50px;"></pre>
+        </div>
+        <h4>特殊配置</h4>
+        <div class="sample-block J-sample">
+            <h5>示例</h5>
+            <div class="sample J-sampleBox">
+<table class="table table-normal table-hover table-stripe">
+    <colgroup>
+        <col width="33%">
+        <col width="33%">
+        <col width="">
+    </colgroup>
+    <tbody>
+        <tr>
+            <th>Tottenham Hotspur</th>
+            <th>Real Madrid</th>
+            <th>Barcelona</th>
+        </tr>
+        <tr>
+            <td>Harry Kane</td>
+            <td>Cristiano Ronaldo</td>
+            <td>Lionel Messi</td>
+        </tr>
+        <tr>
+            <td>Christian Eriksen</td>
+            <td>Gareth Bale</td>
+            <td>Neymar da Silva Santos</td>
+        </tr>
+        <tr>
+            <td>Dele Alli</td>
+            <td>James Rodríguez</td>
+            <td>Luis Suárez</td>
+        </tr>
+    </tbody>
+</table>
+            </div>
+            <h5>Code</h5>
+            <div class="copy"><button class="J-copy">copy</button></div>
+            <pre class="J-sampleCode" id="code-3" style="width:100%;height: 50px;"></pre>
+            <p class="tips">
+                说明：<b>table-hover</b>：鼠标划过行变色；<b>table-stripe</b>：隔行变色
+            </p>
+
         </div>
 
 	</div>
@@ -99,13 +142,10 @@ or
 
 
 
-
-
-
     <script src="src/js/asset/ace/ace.js"></script>
     <script src="src/js/asset/ace/ext-static_highlight.js"></script>
+    <script src="src/js/asset/clipboard/clipboard.min.js"></script>
     <script src="src/js/code.js"></script>
-
 	
 </body>
 </html>

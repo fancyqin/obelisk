@@ -1,22 +1,3 @@
-@import "../common/obelisk/base";
-@import "../common/obelisk/mixin/center";
-@import "../common/obelisk/mixin/grid";
-@import "../common/obelisk/mixin/layout";
-@import "../common/obelisk/lib/button";
-@import "../common/obelisk/lib/flag";
-@import "../common/obelisk/lib/input";
-@import "../common/obelisk/lib/select";
-@import "../common/obelisk/module/calendar";
-@import "../common/obelisk/module/dialog";
-@import "../common/obelisk/module/flags";
-@import "../common/obelisk/module/form";
-@import "../common/obelisk/module/pager";
-@import "../common/obelisk/module/scrollbar";
-@import "../common/obelisk/module/step";
-@import "../common/obelisk/module/table";
-@import "../common/obelisk/module/tag";
-
-
 
 .obelisk{
     box-sizing: border-box;
@@ -51,5 +32,22 @@
     }
     .sample-block{
         margin-bottom: 30px;
+    }
+    .tips{
+        border: 1px dashed #ddd;
+        background: #f3f5f7;
+        padding: 20px;
+        line-height: 2;
+    }
+    .copy{
+        button{
+            float: right;
+            height: 24px;
+            line-height: 24px;
+            border: 1px solid #2F3129;
+            border-bottom: 0;
+            padding: 0 10px;
+            margin-top: -20px;
+        }
     }
 }

@@ -47,7 +47,7 @@ if (!Array.prototype.forEach){
         var copy = el.querySelectorAll('.J-copy')[0];
         var id = code.getAttribute('id');
         var editor = ace.edit(id);
-        editor.setTheme("ace/theme/monokai");
+        editor.setTheme("ace/theme/kuroir");
         var session = editor.getSession();
         session.setMode("ace/mode/html");
         session.setUseWrapMode(true);

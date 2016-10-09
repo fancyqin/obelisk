@@ -1,3 +1,28 @@
+@font-face {
+    font-family: 'Mic-icon';
+    src: url("http://www.micstatic.com/gb/font/micon/micon-2/micon.eot?v=20160408");
+    src: url("http://www.micstatic.com/gb/font/micon/micon-2/micon.eot?#iefix&v=20160408") format("embedded-opentype"),
+    url("http://www.micstatic.com/gb/font/micon/micon-2/micon.woff?v=20160408") format("woff"),
+    url("http://www.micstatic.com/gb/font/micon/micon-2/micon.ttf?v=20160408") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.micon {
+    font-family: 'Mic-icon';
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: inherit;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    font-size: 16px;
+    line-height: 1;
+    vertical-align: middle;
+    text-decoration: none !important;
+}
+
 
 .obelisk{
     box-sizing: border-box;
@@ -14,8 +39,8 @@
     > h3{
         font-size: 1.5em;
         margin: .5em 0;
-        padding-bottom: 0.3em;
-        border-bottom: 1px dashed #ddd;
+        padding-top: 0.3em;
+        color: #555;
     }
     > h4{
         font-size: 18px;
@@ -47,6 +72,15 @@
         line-height: 2;
     }
     .copy{
+        position: relative;
+        .copy-tip{
+            position: absolute;
+            z-index: 99;
+            color: green;
+            display: inline-block;
+            right: 55px;
+            bottom: 0;
+        }
         button{
             float: right;
             height: 24px;

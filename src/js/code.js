@@ -47,6 +47,8 @@ if (!Array.prototype.forEach){
         var copy = el.querySelectorAll('.J-copy')[0];
         var id = code.getAttribute('id');
         var editor = ace.edit(id);
+
+        
         editor.setTheme("ace/theme/kuroir");
         var session = editor.getSession();
         session.setMode("ace/mode/html");
@@ -55,9 +57,8 @@ if (!Array.prototype.forEach){
         editor.setOption("minLines", 2);
         editor.setOption("maxLines", 100);
         editor.$blockScrolling = Infinity;
-
         editor.setValue(box.innerHTML);
-
+        editor.clearSelection();
         //clip
         copy.setAttribute('data-clipboard-text','error');
         var clip = new Clipboard(copy,{
@@ -67,6 +68,13 @@ if (!Array.prototype.forEach){
         });
 
         clip.on('success',function(e){
+            
+            copy.insertAdjacentHTML('afterend', '<div class="copy-tip J-copyTip">Copy Success!</div>');
+            var copyTip = el.querySelectorAll('.J-copyTip')[0];
+            
+            setTimeout(function(){
+                copyTip.parentNode.removeChild(copyTip);
+            },1500);
             
         });
 

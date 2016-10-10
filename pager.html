@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pager</title>
+    <link rel="stylesheet" href="http://www.micstatic.com/gb/out/demo.css">
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+	
+	<div class="obelisk">
+		<h2>分页</h2>
+        <h3>引用</h3>
+        <div class="sample-block">
+            <div class="highlight J-highlight">
+@import "$${path.common}/obelisk/module/_pager";
+            </div>    
+        </div>
+
+		<h3>一般分页</h3>
+        <div class="sample-block J-sample">
+            <h5>示例</h5>
+            <div class="sample J-sampleBox">
+<div class="pager">
+    <a href="" disabled><i class="micon">&#xe009;</i></a>
+    <a href="">1</a>
+    <a href="">2</a>
+    <a href="">3</a>
+    <a href="">4</a>
+    <span class="current">5</span>
+    <a href="">6</a>
+    <a href="">7</a>
+    <a href="">8</a>
+    <span class="dot"><i class="micon">&#xe060;</i></span>
+    <a href="">999</a>
+    <a href="" class="main J-step-5">Next <i class="micon">&#xe008;</i></a>
+</div>
+            </div>
+            <h5>代码</h5>
+            <div class="copy"><button class="J-copy"><i class="micon">&#xe02e;</i></button></div>
+            <pre class="J-sampleCode" id="pager-1"></pre>
+        </div>
+
+        <h3>简化分页</h3>
+        <div class="sample-block J-sample">
+            <h5>示例</h5>
+            <div class="sample J-sampleBox">
+<div class="pager-simple">
+    <span class="page-num">1/999 页</span>
+    <div class="pager-box cf">
+        <a href=""><i class="micon">&#xe009;</i></a>
+        <a href=""><i class="micon">&#xe008;</i></a>
+    </div>
+</div>
+            </div>
+            <h5>代码</h5>
+            <div class="copy"><button class="J-copy"><i class="micon">&#xe02e;</i></button></div>
+            <pre class="J-sampleCode" id="pager-2"></pre>
+        </div>
+
+	</div>
+
+
+
+
+    <script src="src/js/asset/ace/ace.js"></script>
+    <script src="src/js/asset/ace/ext-static_highlight.js"></script>
+    <script src="src/js/asset/clipboard/clipboard.min.js"></script>
+    <script src="src/js/code.js"></script>
+	
+</body>
+</html>

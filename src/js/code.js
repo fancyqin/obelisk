@@ -23,6 +23,11 @@ if (!Array.prototype.forEach){
 }
 
 
+function renderHTML(el){
+
+}
+
+
 
 (function(){
 
@@ -32,10 +37,10 @@ if (!Array.prototype.forEach){
     //highlight
     qsa('.J-highlight').forEach(function(el){
         highlight(el, {
-            mode: el.getAttribute("ace-mode"),
-            theme: el.getAttribute("ace-theme"),
+            mode: el.getAttribute("ace-mode") || 'ace/mode/sass',
+            theme: el.getAttribute("ace-theme") || 'ace/theme/kuroir',
             startLineNumber: 1,
-            showGutter: el.getAttribute("ace-gutter"),
+            showGutter: el.getAttribute("ace-gutter") || true,
             trim: true
         });
     });

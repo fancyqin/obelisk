@@ -51,17 +51,28 @@ body{
         font-size: 18px;
         margin: 10px 0;
     }
-    .sample-block h5{
+    .sub-title{
+        
+        > span{
+        display: inline-block;
+        padding: 2px 10px;
+        font-weight: normal;
+        text-transform: uppercase;
+        position: relative;
         font-size: 12px;
         margin: 10px 0;
         border: 1px solid #ccc;
         background: #f3f5f7;
         color: #555;
         border-radius: 10px;
-        display: inline-block;
-        padding: 2px 10px;
-        font-weight: normal;
-        text-transform: uppercase;
+        }
+        .input-toggle{
+            display: inline-block;
+            margin-left: 10px;
+            .input-wrap{
+                margin: 0;
+            }
+        }
     }
     .highlight{
         // margin: 20px 0;
@@ -105,8 +116,25 @@ body{
             margin-top: -20px;
         }
     }
-    .ace_editor{
-        width: 100%;
-        margin-bottom: 20px;
+
+    .code-box{
+        display: none;
+        .ace_editor{
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        &.open{
+            display: block;
+        }
+    }
+    .trigger-all{
+        margin-top: 20px;
+        float: right;
+        font-size: 12px;
+        font-weight: normal;
+        .input-toggle{
+            display: inline-block;
+            margin-left: 10px;
+        }
     }
 }

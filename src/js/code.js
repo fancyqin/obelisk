@@ -1,10 +1,9 @@
 
 
 var highlight = ace.require("ace/ext/static_highlight");
+var beautify = ace.require("ace/ext/beautify");
 
-function qsa(sel) {
-    return Array.apply(null, document.querySelectorAll(sel));
-}
+
 
 if (!Array.prototype.forEach){
     Array.prototype.forEach = function(fun /*, thisp*/)
@@ -22,16 +21,27 @@ if (!Array.prototype.forEach){
     };
 }
 
-
-function renderHTML(el){
+function renderHTML(){
     
 }
 
 
-
 (function(){
 
+    function qsa(sel) {
+        return Array.apply(null, document.querySelectorAll(sel));
+    }
+
+    var triggerAll = document.querySelector('.J-codeTriggerAll');
     
+    function isSelectAll(){
+        var triggers = qsa('.J-codeTrigger').length;
+        var selectTriggers = qsa('.J-codeTrigger:checked').length;
+        
+        triggerAll.checked = triggers === selectTriggers ? true:false;
+    }
+
+
     
 
     //highlight
@@ -50,6 +60,8 @@ function renderHTML(el){
         var box = el.querySelectorAll('.J-sampleBox')[0];
         var code = el.querySelectorAll('.J-sampleCode')[0];
         var copy = el.querySelectorAll('.J-copy')[0];
+        var codeBox = el.querySelectorAll('.J-codeBox')[0];
+        var trigger = el.querySelectorAll('.J-codeTrigger')[0];
         var id = code.getAttribute('id');
         var editor = ace.edit(id);
 
@@ -63,7 +75,12 @@ function renderHTML(el){
         editor.setOption("maxLines", 100);
         editor.$blockScrolling = Infinity;
         editor.setValue(box.innerHTML);
+        // editor.commands.addCommands(beautify.commands);
+        // beautify.beautify(editor.session);
+
         editor.clearSelection();
+        
+        
         //clip
         copy.setAttribute('data-clipboard-text','error');
         var clip = new Clipboard(copy,{
@@ -79,6 +96,7 @@ function renderHTML(el){
             
             setTimeout(function(){
                 copyTip.parentNode.removeChild(copyTip);
+                
             },1500);
             
         });
@@ -92,6 +110,17 @@ function renderHTML(el){
         });
 
         
+
+        if(trigger){
+            trigger.addEventListener('change',function(){
+                if(this.checked){
+                    codeBox.classList.add('open');
+                }else{
+                    codeBox.classList.remove('open');
+                }
+                isSelectAll();
+            });
+        }
         
         
 
@@ -99,7 +128,20 @@ function renderHTML(el){
         
     });
 
-
+    triggerAll.addEventListener('change',function(){
+        qsa('.J-sample').forEach(function(el){
+            var codeBox = el.querySelectorAll('.J-codeBox')[0];
+            var trigger = el.querySelectorAll('.J-codeTrigger')[0];
+            if(triggerAll.checked){
+                trigger.checked = true;
+                codeBox.classList.add('open');
+            }else{
+                trigger.checked = false;
+                codeBox.classList.remove('open');
+            }
+            
+        });
+    });
 
     
 

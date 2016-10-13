@@ -9,8 +9,17 @@
 </head>
 <body>
 	
-	<div class="obelisk">
-		<h2>分页</h2>
+	<div class="obelisk obelisk-form">
+		<h2>分页
+            <div class="trigger-all">展开所有代码
+                <div class="input-toggle">
+                    <label class="input-wrap">
+                        <input class="J-codeTriggerAll" type="checkbox">
+                        <span class="input-ctnr"></span>
+                    </label>
+                </div>
+            </div>
+        </h2>
         <h3>引用</h3>
         <div class="sample-block">
             <div class="highlight J-highlight">
@@ -19,9 +28,8 @@
         </div>
 
 		<h3>一般分页</h3>
-        <div class="sample-block J-sample">
-            <h5>示例</h5>
-            <div class="sample J-sampleBox">
+        <div id="code-1">
+            <div class="ob-code">
 <div class="pager">
     <a href="" disabled><i class="ob-icon icon-left"></i></a>
     <a href="">1</a>
@@ -37,37 +45,49 @@
     <a href="" class="main J-step-5">Next <i class="ob-icon icon-right"></i></a>
 </div>
             </div>
-            <h5>代码</h5>
-            <div class="copy"><button class="J-copy"><i class="micon">&#xe02e;</i></button></div>
-            <pre class="J-sampleCode" id="pager-1"></pre>
         </div>
 
+
+
+
+
+
+
         <h3>简化分页</h3>
-        <div class="sample-block J-sample">
-            <h5>示例</h5>
-            <div class="sample J-sampleBox">
-<div class="pager-simple">
+
+        <div id="code-2">
+            <div class="ob-code">
+ <div class="pager-simple">
     <span class="page-num">1/999 页</span>
     <div class="pager-box cf">
         <a href=""><i class="ob-icon icon-left"></i></a>
         <a href=""><i class="ob-icon icon-right"></i></a>
     </div>
-</div>
+</div>               
             </div>
-            <h5>代码</h5>
-            <div class="copy"><button class="J-copy"><i class="micon">&#xe02e;</i></button></div>
-            <pre class="J-sampleCode" id="pager-2"></pre>
         </div>
+
+
+
 
 	</div>
 
 
 
 
-    <script src="src/js/asset/ace/ace.js"></script>
+   <script src="src/js/asset/ace/ace.js"></script>
     <script src="src/js/asset/ace/ext-static_highlight.js"></script>
+    <!--<script src="src/js/asset/ace/ext-beautify.js"></script>-->
     <script src="src/js/asset/clipboard/clipboard.min.js"></script>
     <script src="src/js/code.js"></script>
+    
+	<script>
+        new Obdemo({elId:'code-1'});
+        new Obdemo({elId:'code-2'});
+    </script>
+
+
+    
 	
 </body>
 </html>

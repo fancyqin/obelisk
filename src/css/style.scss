@@ -1,3 +1,6 @@
+html{
+    background: #f3f5f7;
+}
 @font-face {
     font-family: 'Mic-icon';
     src: url("http://www.micstatic.com/gb/font/micon/micon-2/micon.eot?v=20160408");
@@ -73,9 +76,6 @@ body{
                 margin: 0;
             }
         }
-    }
-    .highlight{
-        // margin: 20px 0;
     }
     .sample{
         margin-bottom: 20px;

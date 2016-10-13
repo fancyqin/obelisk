@@ -4,12 +4,22 @@
     <meta charset="UTF-8">
     <title>Step</title>
     <link rel="stylesheet" href="http://www.micstatic.com/gb/out/demo.css">
+    <!--<link rel="stylesheet" href="src/css/demo.css">-->
     <link rel="stylesheet" href="src/css/style.css">
 </head>
 <body>
 	
-	<div class="obelisk">
-		<h2>流程指引</h2>
+	<div class="obelisk obelisk-form">
+		<h2>流程指引
+            <div class="trigger-all">展开所有代码
+                <div class="input-toggle">
+                    <label class="input-wrap">
+                        <input class="J-codeTriggerAll" type="checkbox">
+                        <span class="input-ctnr"></span>
+                    </label>
+                </div>
+            </div>
+        </h2>
         <h3>引用</h3>
         <div class="sample-block">
             <div class="highlight J-highlight">
@@ -18,9 +28,8 @@
         </div>
 
 		<h3>最简指引</h3>
-        <div class="sample-block J-sample">
-            <h5>示例</h5>
-            <div class="sample J-sampleBox">
+        <div id="code-1">
+            <div class="ob-code">
 <div class="step step-4 cf">
     <div class="step-item step-ed">
         <span class="dot"></span>
@@ -39,15 +48,11 @@
     </div>
 </div>
             </div>
-            <h5>代码</h5>
-            <div class="copy"><button class="J-copy"><i class="micon">&#xe02e;</i></button></div>
-            <pre class="J-sampleCode" id="step-1"></pre>
-        </div>
+        </div>        
 
         <h3>带文字说明</h3>
-        <div class="sample-block J-sample">
-            <h5>示例</h5>
-            <div class="sample J-sampleBox">
+        <div id="code-2">
+            <div class="ob-code">
 <div class="step step-5 cf">
     <div class="step-item step-ed">
         <span class="dot"></span>
@@ -75,14 +80,12 @@
     </div>
 </div>
             </div>
-            <h5>代码</h5>
-            <div class="copy"><button class="J-copy"><i class="micon">&#xe02e;</i></button></div>
-            <pre class="J-sampleCode" id="step-2"></pre>
-        </div>
+        </div>    
+
+
         <h3>大图标样式</h3>
-        <div class="sample-block J-sample">
-            <h5>示例</h5>
-            <div class="sample J-sampleBox">
+        <div id="code-3">
+            <div class="ob-code">
 <div class="step step-big step-6 cf">
     <div class="step-item step-ed">
         <a href="" class="dot">1</a>
@@ -115,10 +118,8 @@
     </div>
 </div>
             </div>
-            <h5>代码</h5>
-            <div class="copy"><button class="J-copy"><i class="micon">&#xe02e;</i></button></div>
-            <pre class="J-sampleCode" id="step-3"></pre>
-        </div>
+        </div>    
+
 
 	</div>
 
@@ -127,8 +128,15 @@
 
     <script src="src/js/asset/ace/ace.js"></script>
     <script src="src/js/asset/ace/ext-static_highlight.js"></script>
+    <!--<script src="src/js/asset/ace/ext-beautify.js"></script>-->
     <script src="src/js/asset/clipboard/clipboard.min.js"></script>
     <script src="src/js/code.js"></script>
+    
+	<script>
+        new Obdemo({elId:'code-1'});
+        new Obdemo({elId:'code-2'});
+        new Obdemo({elId:'code-3'});
+    </script>
 	
 </body>
 </html>

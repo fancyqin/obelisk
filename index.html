@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <link rel="stylesheet" href="http://www.micstatic.com/gb/out/demo.css">
+    <!--<link rel="stylesheet" href="http://www.micstatic.com/gb/out/demo.css">-->
+    <link rel="stylesheet" href="src/css/demo.css">
     <link rel="stylesheet" href="src/css/style.css">
 </head>
 <body>
@@ -25,11 +26,13 @@
 @import "$${path.common}/obelisk/module/_table.scss";
             </div>    
         </div>
+        
+
+
 
 		<h3>基础表格</h3>
-        <div class="sample-block J-sample">
-            <h5 class="sub-title"><span>示例</span></h5>
-            <div class="sample J-sampleBox">
+        <div id="code-1">
+            <div class="ob-code">
 <table class="table table-base">
     <colgroup>
         <col width="33%">
@@ -58,28 +61,13 @@
             <td>Luis Suárez</td>
         </tr>
     </tbody>
-</table>
+</table>             
             </div>
-            <h5 class="sub-title">
-                <span>代码</span>
-                <div class="input-toggle">
-                    <label class="input-wrap">
-                        <input class="J-codeTrigger" type="checkbox">
-                        <span class="input-ctnr"></span>
-                    </label>
-                </div>
-            </h5>
-            <div class="J-codeBox code-box">
-                <div class="copy"><button class="J-copy"><i class="micon">&#xe02e;</i></button></div>
-                <pre class="J-sampleCode" id="code-1"></pre>
-            </div>
-            
         </div>
 
         <h3>一般表格</h3>
-        <div class="sample-block J-sample">
-            <h5 class="sub-title"><span>示例</span></h5>
-            <div class="sample J-sampleBox">
+        <div id="code-2">
+            <div class="ob-code">
 <table class="table table-normal"><colgroup><col width="33%"><col width="33%"><col width="">
     </colgroup>
     <tbody>
@@ -104,26 +92,13 @@
             <td>Luis Suárez</td>
         </tr>
     </tbody>
-</table>
-            </div>
-            <h5 class="sub-title">
-                <span>代码</span>
-                <div class="input-toggle">
-                    <label class="input-wrap">
-                        <input class="J-codeTrigger" type="checkbox">
-                        <span class="input-ctnr"></span>
-                    </label>
-                </div>
-            </h5>
-            <div class="J-codeBox code-box">
-                <div class="copy"><button class="J-copy"><i class="micon">&#xe02e;</i></button></div>
-                <pre class="J-sampleCode" id="code-2"></pre>
+</table>                
             </div>
         </div>
+
         <h3>特殊配置</h3>
-        <div class="sample-block J-sample">
-            <h5 class="sub-title"><span>示例</span></h5>
-            <div class="sample J-sampleBox">
+        <div id="code-3">
+            <div class="ob-code">
 <table class="table table-normal table-hover table-stripe">
     <colgroup>
         <col width="33%">
@@ -152,27 +127,16 @@
             <td>Luis Suárez</td>
         </tr>
     </tbody>
-</table>
+</table>                
             </div>
-            <h5 class="sub-title">
-                <span>代码</span>
-                <div class="input-toggle">
-                    <label class="input-wrap">
-                        <input class="J-codeTrigger" type="checkbox">
-                        <span class="input-ctnr"></span>
-                    </label>
-                </div>
-            </h5>
-            <div class="J-codeBox code-box">
-                <div class="copy"><button class="J-copy"><i class="micon">&#xe02e;</i></button></div>
-                <pre class="J-sampleCode" id="code-3"></pre>
+            <div class="ob-info">
+                <h5 class="sub-title"><span>说明</span></h5>
+                <p class="tips">
+                    说明：<b>table-hover</b>：鼠标划过行变色；<b>table-stripe</b>：隔行变色
+                </p>
             </div>
-            <h5 class="sub-title"><span>说明</span></h5>
-            <p class="tips">
-                说明：<b>table-hover</b>：鼠标划过行变色；<b>table-stripe</b>：隔行变色
-            </p>
-
         </div>
+
 
 	</div>
 
@@ -181,11 +145,16 @@
 
     <script src="src/js/asset/ace/ace.js"></script>
     <script src="src/js/asset/ace/ext-static_highlight.js"></script>
-    <script src="src/js/asset/ace/ext-beautify.js"></script>
+    <!--<script src="src/js/asset/ace/ext-beautify.js"></script>-->
     <script src="src/js/asset/clipboard/clipboard.min.js"></script>
     <script src="src/js/code.js"></script>
-    <script src="src/js/test.js"></script>
+    <!--<script src="src/js/test.js"></script>-->
     
-	
+	<script>
+        new Obdemo({elId:'code-1'});
+        new Obdemo({elId:'code-2'});
+        new Obdemo({elId:'code-3'});
+    </script>
+
 </body>
 </html>

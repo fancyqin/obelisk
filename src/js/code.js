@@ -1,12 +1,9 @@
-;
-void
-
-function () {
+void function () {
 
     var defaults = {
-        elId: 'id',
-        codeEl: '.ob-code',
-        infoEl: '.ob-info'
+        items:[{
+            elId:'id'
+        }]
     };
 
     var renderHTML = '<div class="sample-block J-sample">' +
@@ -31,7 +28,7 @@ function () {
     };
     Obdemo.prototype = {
         _init: function () {
-            
+
             this._render();
             this._highlight();
             this._aceCode();
@@ -39,21 +36,27 @@ function () {
 
         },
         _render: function () {
-            var el = document.querySelector('#' + this.conf.elId),
-                code = el.querySelector(this.conf.codeEl),
-                info = el.querySelector(this.conf.infoEl);
+            var _this = this;
+            if(this.conf.items instanceof Array){
+                this.conf.items.forEach(function(item){
+                    var el = document.querySelector('#' + item.elId),
+                        code = el.querySelector(item.codeEl || '.ob-code'),
+                        info = el.querySelector(item.infoEl || '.ob-info');
 
-            if (el.length === 0) return;
+                    if (el.length === 0) return;
 
-            var result = renderHTML.replace('{{id}}', this.conf.elId).replace('{{code}}', code.innerHTML).replace('{{info}}', info ? info.innerHTML : '');
-            el.insertAdjacentHTML('afterend', result);
-            el.parentNode.removeChild(el);
+                    var result = renderHTML.replace('{{id}}', item.elId).replace('{{code}}', code.innerHTML).replace('{{info}}', info ? info.innerHTML : '');
+                    el.insertAdjacentHTML('afterend', result);
+                    el.parentNode.removeChild(el);
+                });
+            }
+            
 
         },
-        _qsa: function(sel){
+        _qsa: function (sel) {
             return Array.apply(null, document.querySelectorAll(sel));
         },
-        _highlight: function(){
+        _highlight: function () {
             var highlight = ace.require("ace/ext/static_highlight");
             //highlight
             this._qsa('.J-highlight').forEach(function (el) {
@@ -66,7 +69,7 @@ function () {
                 });
             });
         },
-        _aceCode:function(){
+        _aceCode: function () {
             var _this = this;
             // var beautify = ace.require("ace/ext/beautify");
             //ace & clip
@@ -138,12 +141,12 @@ function () {
 
             });
         },
-        isSelectAll:function(){
+        isSelectAll: function () {
             var triggers = this._qsa('.J-codeTrigger').length;
             var selectTriggers = this._qsa('.J-codeTrigger:checked').length;
             triggerAll.checked = triggers === selectTriggers ? true : false;
         },
-        _selectEvent: function(){
+        _selectEvent: function () {
             var _this = this;
             triggerAll.addEventListener('change', function () {
                 _this._qsa('.J-sample').forEach(function (el) {

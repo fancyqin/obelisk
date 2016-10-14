@@ -2,5 +2,5 @@ node_modules/
 .idea/
 *.map
 npm-debug.log
-dist/
 .sass-cache/
+.vscode/

@@ -23,7 +23,9 @@
   "homepage": "https://github.com/fancyqin/obelisk#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-content-includer": "0.0.7",
     "gulp-ruby-sass": "^2.1.0",
-    "gulp-sourcemaps": "^1.6.0"
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-utf8-convert": "0.0.7"
   }
 }

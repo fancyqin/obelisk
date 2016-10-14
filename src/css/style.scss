@@ -138,3 +138,18 @@ body{
         }
     }
 }
+
+.ob-nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background: #fff;
+    li{
+        font-size: 14px;
+        line-height: 2;
+        font-family: 'Microsoft Yahei',sans-serif;  
+    }
+}

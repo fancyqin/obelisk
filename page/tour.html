@@ -2,19 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Table</title>
-    <link rel="stylesheet" href="http://www.micstatic.com/gb/out/demo.css">
-    <!--<link rel="stylesheet" href="src/css/demo.css">-->
-    <link rel="stylesheet" href="src/css/style.css">
+    <title>Tour</title>
+    <!--include "_cssImport.html"-->
 </head>
 <body>
 
 <!--include "_nav.html"-->
 	
 	<div class="obelisk obelisk-form">
-		<h2>表格 
+		<h2>新手指引 
             <div class="trigger-all">展开所有代码
-                <div class="input-toggle">
+                <div class="input-toggle J-step-2">
                     <label class="input-wrap">
                         <input class="J-codeTriggerAll" type="checkbox">
                         <span class="input-ctnr"></span>
@@ -25,120 +23,91 @@
         <h3>引用</h3>
         <div class="sample-block">
             <div class="highlight J-highlight">
-@import "$${path.common}/obelisk/module/_table.scss";
+@import "$${path.common}/obelisk/module/_tour.scss";
             </div>    
         </div>
         
 
 
 
-		<h3>基础表格</h3>
+		<h3>新手指引</h3>
         <div id="code-1">
             <div class="ob-code">
-<table class="table table-base">
-    <colgroup>
-        <col width="33%">
-        <col width="33%">
-        <col width="">
-    </colgroup>
-    <tbody>
-        <tr>
-            <th>Tottenham Hotspur</th>
-            <th>Real Madrid</th>
-            <th>Barcelona</th>
-        </tr>
-        <tr>
-            <td>Harry Kane</td>
-            <td>Cristiano Ronaldo</td>
-            <td>Lionel Messi</td>
-        </tr>
-        <tr>
-            <td>Christian Eriksen</td>
-            <td>Gareth Bale</td>
-            <td>Neymar da Silva Santos</td>
-        </tr>
-        <tr>
-            <td>Dele Alli</td>
-            <td>James Rodríguez</td>
-            <td>Luis Suárez</td>
-        </tr>
-    </tbody>
-</table>             
-            </div>
-        </div>
-
-        <h3>一般表格</h3>
-        <div id="code-2">
-            <div class="ob-code">
-<table class="table table-normal"><colgroup><col width="33%"><col width="33%"><col width="">
-    </colgroup>
-    <tbody>
-        <tr>
-            <th>Tottenham Hotspur</th>
-            <th>Real Madrid</th>
-            <th>Barcelona</th>
-        </tr>
-        <tr>
-            <td>Harry Kane</td>
-            <td>Cristiano Ronaldo</td>
-            <td>Lionel Messi</td>
-        </tr>
-        <tr>
-            <td>Christian Eriksen</td>
-            <td>Gareth Bale</td>
-            <td>Neymar da Silva Santos</td>
-        </tr>
-        <tr>
-            <td>Dele Alli</td>
-            <td>James Rodríguez</td>
-            <td>Luis Suárez</td>
-        </tr>
-    </tbody>
-</table>                
-            </div>
-        </div>
-
-        <h3>特殊配置</h3>
-        <div id="code-3">
-            <div class="ob-code">
-<table class="table table-normal table-hover table-stripe">
-    <colgroup>
-        <col width="33%">
-        <col width="33%">
-        <col width="">
-    </colgroup>
-    <tbody>
-        <tr>
-            <th>Tottenham Hotspur</th>
-            <th>Real Madrid</th>
-            <th>Barcelona</th>
-        </tr>
-        <tr>
-            <td>Harry Kane</td>
-            <td>Cristiano Ronaldo</td>
-            <td>Lionel Messi</td>
-        </tr>
-        <tr>
-            <td>Christian Eriksen</td>
-            <td>Gareth Bale</td>
-            <td>Neymar da Silva Santos</td>
-        </tr>
-        <tr>
-            <td>Dele Alli</td>
-            <td>James Rodríguez</td>
-            <td>Luis Suárez</td>
-        </tr>
-    </tbody>
-</table>                
+<div class="tour-test">
+    <button id="J-tourBegin" class="btn J-step-3" style="margin:10px 0;">开始指引</button>
+    <hr>
+    <div class="J-step-1 tag tag-small tag-color tag-blue" style="margin:10px 0;">yes come on</div>
+</div>
             </div>
             <div class="ob-info">
-                <h5 class="sub-title"><span>说明</span></h5>
-                <p class="tips">
-                    说明：<b>table-hover</b>：鼠标划过行变色；<b>table-stripe</b>：隔行变色
-                </p>
+                <h5 class="sub-title"><span>JS代码</span></h5>
+                
+                <div class="highlight J-highlight" ace-mode="ace/mode/javascript">
+var tour = new Tour({
+    steps: [
+    {
+        elem: ".J-step-1",
+        html: "第一步，把冰箱门打开", 
+        dir: "s"
+    },{
+        elem:".J-step-2",
+        html:'第二步，把大象放进去',
+        dir:"ws"
+    },{
+        elem:'.J-step-3',
+        html:'第三步，把冰箱门关闭',
+        dir:'n'
+    }
+    ]
+});
+
+$('#J-tourBegin').click(function(){
+    tour.start();
+})
+                </div>
+                
+                
+                <div class="tips">
+                    <h2>API文档</h2>
+                    <h3>configs:</h3>
+                    <h4>steps: [Obj,Obj1,...]</h4>
+                    <p>Obj.<b>elem</b> : &lt; string &gt; 该步骤中高亮元素<br>
+                        Obj.<b>html</b> : &lt; string &gt; 该步骤中说明文字<br>
+                        Obj.<b>dir</b> : &lt; string &gt; 说明文字显示位置：共八个方向按地图东南西北缩写表示："N","S","W","E","NW","NE","WS","ES" ，默认"S",即下方。<br>
+                        Obj.<b>css</b> : &lt; object &gt; 附加样式<br>
+                        Obj.<b>offset</b> : &lt; string &gt; 位置调整<br>
+                        Obj.<b>before</b> : &lt; function(resolve){} &gt; Promise<br>
+                        Obj.<b>clear</b> : &lt; function &gt; 在结束或者下一步时调用，主要用于清除 before 和 callback操作产生的影响<br>
+                        Obj.<b>callback</b> : &lt; function &gt; callback
+                    </p>
+                    <h4>text : {}</h4>
+                    <p>按钮文字</p>
+                    <h4>zIndex: &lt; Number &gt;</h4>
+                    <p>z-index 值，默认10000</p>
+                    <h4>auto : &lt; Boolean &gt;</h4>
+                    <p>是否自动开始steps</p>
+
+                    <h3>Action:</h3>
+                    <h4>tour.start(isRestart)</h4>
+                    <p>开始指引</p>
+                    <h4>tour.step(index)</h4>
+                    <p>指引第 index-1 步</p>
+                    <h4>tour.show(silent)</h4>
+                    <p>显示指引</p>
+                    <h4>tour.hide(silent)</h4>
+                    <p>隐藏指引</p>
+                    <h4>tour.dispose()</h4>
+                    <p></p>
+                    <h4>tour.resetCss()</h4>
+                    <p>重置css样式</p>
+
+                    
+                        
+                    
+                    
+                </div>
             </div>
         </div>
-
 
 	</div>
 
@@ -149,10 +118,46 @@
     <script src="src/js/asset/ace/ext-static_highlight.js"></script>
     <!--<script src="src/js/asset/ace/ext-beautify.js"></script>-->
     <script src="src/js/asset/clipboard/clipboard.min.js"></script>
+    
+
+    <script src="http://www.micstatic.com/gb/js/libs/jquery.js"></script>
+    <script src="http://www.micstatic.com/gb/js/assets/observe/observe.js"></script>
+    <script src="http://www.micstatic.com/gb/js/assets/simplePromise/simplePromise.js"></script>
+    <!--<script src="http://www.micstatic.com/gb/js/assets/tour/tour.js"></script>-->
+    <script src="src/js/tour.js"></script>
     <script src="src/js/code.js"></script>
     
 	<script>
-        new Obdemo({items:[{elId:'code-1'},{elId:'code-2'},{elId:'code-3'}]});
+
+
+
+        new Obdemo({
+            items:[{elId:'code-1'}],
+            cb: todo,
+            });
+        function todo(){
+            var tour = new Tour({
+                steps: [
+                {
+                    elem: ".J-step-1",
+                    html: "第一步，把冰箱门打开",
+                    dir: "s"
+                },{
+                    elem:".J-step-2",
+                    html:'第二步，把大象放进去',
+                    dir:"ws"
+                },{
+                    elem:'.J-step-3',
+                    html:'第三步，把冰箱门关闭',
+                    dir:'ne'
+                }
+                ]
+            });
+            
+            $('#J-tourBegin').click(function(){
+                tour.start();
+            })
+        }
     </script>
 
 </body>

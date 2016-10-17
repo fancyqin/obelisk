@@ -3,7 +3,8 @@ void function () {
     var defaults = {
         items:[{
             elId:'id'
-        }]
+        }],
+        cb:function(){}
     };
 
     var renderHTML = '<div class="sample-block J-sample">' +
@@ -33,6 +34,10 @@ void function () {
             this._highlight();
             this._aceCode();
             this._selectEvent();
+            
+            if(typeof this.conf.cb === 'function'){
+                this.conf.cb.call(this);
+            }
 
         },
         _render: function () {

@@ -25,7 +25,7 @@
 }
 
 /*
- * aid brush ��ɫ��ǳ ��ˢԽ����ɫԽ��
+ * aid brush ��ɫ��ǳ ��ˢԽ����ɫԽ��
  * [mini, tiny, small, medium, large, big, huge, massive]
  */
 /*
@@ -35,24 +35,24 @@
  */
 @font-face {
   font-family: 'Roboto-Regular';
-  src: url("//www.micstatic.com:2001/gb/font/Roboto/roboto_regular_macroman/Roboto-Regular-webfont.eot");
-  src: url("//www.micstatic.com:2001/gb/font/Roboto/roboto_regular_macroman/Roboto-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("//www.micstatic.com:2001/gb/font/Roboto/roboto_regular_macroman/Roboto-Regular-webfont.woff") format("woff"), url("//www.micstatic.com:2001/gb/font/Roboto/roboto_regular_macroman/Roboto-Regular-webfont.ttf") format("truetype"), url("//www.micstatic.com:2001/gb/font/Roboto/roboto_regular_macroman/Roboto-Regular-webfont.svg#RobotoRegular") format("svg");
+  src: url("http://www.micstatic.com/gb/font/Roboto/roboto_regular_macroman/Roboto-Regular-webfont.eot");
+  src: url("http://www.micstatic.com/gb/font/Roboto/roboto_regular_macroman/Roboto-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("http://www.micstatic.com/gb/font/Roboto/roboto_regular_macroman/Roboto-Regular-webfont.woff") format("woff"), url("http://www.micstatic.com/gb/font/Roboto/roboto_regular_macroman/Roboto-Regular-webfont.ttf") format("truetype"), url("http://www.micstatic.com/gb/font/Roboto/roboto_regular_macroman/Roboto-Regular-webfont.svg#RobotoRegular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Roboto-Bold';
-  src: url("//www.micstatic.com:2001/gb/font/Roboto/roboto_bold_macroman/Roboto-Bold-webfont.eot");
-  src: url("//www.micstatic.com:2001/gb/font/Roboto/roboto_bold_macroman/Roboto-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("//www.micstatic.com:2001/gb/font/Roboto/roboto_bold_macroman/Roboto-Bold-webfont.woff") format("woff"), url("//www.micstatic.com:2001/gb/font/Roboto/roboto_bold_macroman/Roboto-Bold-webfont.ttf") format("truetype"), url("//www.micstatic.com:2001/gb/font/Roboto/roboto_bold_macroman/Roboto-Bold-webfont.svg#RobotoBold") format("svg");
+  src: url("http://www.micstatic.com/gb/font/Roboto/roboto_bold_macroman/Roboto-Bold-webfont.eot");
+  src: url("http://www.micstatic.com/gb/font/Roboto/roboto_bold_macroman/Roboto-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("http://www.micstatic.com/gb/font/Roboto/roboto_bold_macroman/Roboto-Bold-webfont.woff") format("woff"), url("http://www.micstatic.com/gb/font/Roboto/roboto_bold_macroman/Roboto-Bold-webfont.ttf") format("truetype"), url("http://www.micstatic.com/gb/font/Roboto/roboto_bold_macroman/Roboto-Bold-webfont.svg#RobotoBold") format("svg");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Mic-icon';
-  src: url("//www.micstatic.com:2001/gb/font/micon/micon-2/micon.eot?v=20160408");
-  src: url("//www.micstatic.com:2001/gb/font/micon/micon-2/micon.eot?#iefix&v=20160408") format("embedded-opentype"), url("//www.micstatic.com:2001/gb/font/micon/micon-2/micon.woff?v=20160408") format("woff"), url("//www.micstatic.com:2001/gb/font/micon/micon-2/micon.ttf?v=20160408") format("truetype");
+  src: url("/common/font/micon/micon-2/micon.eot?v=20160408");
+  src: url("/common/font/micon/micon-2/micon.eot?#iefix&v=20160408") format("embedded-opentype"), url("/common/font/micon/micon-2/micon.woff?v=20160408") format("woff"), url("/common/font/micon/micon-2/micon.ttf?v=20160408") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -1732,6 +1732,15 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
 }
 
+/*
+ * aid brush ��ɫ��ǳ ��ˢԽ����ɫԽ��
+ * [mini, tiny, small, medium, large, big, huge, massive]
+ */
+/*
+ * extend color
+ * Roman Numbers
+ * i: 1, ii: 2, iii: 3, iv: 4, v: 5, vi: 6, vii: 7, viii: 8, ix: 9, x: 10
+ */
 .calendar {
   padding: 15px;
   width: 245px;
@@ -2014,7 +2023,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 40px;
   z-index: 1;
   border-radius: 0 3px 3px 0;
-  background: url(//www.micstatic.com:2001/gb/img/icon/dlg-close.png) no-repeat;
+  background: url(/common/img/icon/dlg-close.png) no-repeat;
   background-position: 0 0px;
   font-size: 0;
   line-height: 0;
@@ -2075,7 +2084,7 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   text-indent: -999em;
   overflow: hidden;
-  background: url(//www.micstatic.com:2001/gb/img/dialog/2.0/icon/loading.gif) no-repeat center center;
+  background: url(/common/img/dialog/2.0/icon/loading.gif) no-repeat center center;
 }
 
 .dlg-footer {
@@ -2164,7 +2173,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .dialog-loading {
-  background: url(//www.micstatic.com:2001/gb/img/icon/loading.gif) no-repeat center center;
+  background: url(/common/img/icon/loading.gif) no-repeat center center;
   width: 100%;
   height: 100%;
   min-width: 500px;
@@ -2235,7 +2244,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 44px;
   font-size: 0px;
   line-height: 0;
-  background: url(//www.micstatic.com:2001/gb/img/dialog/2.0/bg-ico.png) no-repeat;
+  background: url(/common/img/dialog/2.0/bg-ico.png) no-repeat;
   background-position: 0 -44px;
 }
 
@@ -2262,7 +2271,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .dialog-confirm.confirm-alert .ico {
-  background: url(//www.micstatic.com:2001/gb/img/dialog/2.0/icon-warn-48.png) no-repeat;
+  background: url(/common/img/dialog/2.0/icon-warn-48.png) no-repeat;
   background-position: 0 0;
   width: 48px;
   height: 48px;
@@ -2561,7 +2570,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #b2b2b2;
 }
 
-.pager .disClick .micon {
+.pager .disClick .micon, .pager .disClick .ob-icon {
   line-height: 28px;
 }
 
@@ -2572,9 +2581,9 @@ h1, h2, h3, h4, h5, h6 {
   color: #b2b2b2;
 }
 
-.pager .micon {
+.pager .micon, .pager .ob-icon {
   margin-right: 0;
-  line-height: 28px;
+  vertical-align: -3px;
 }
 
 .pager .page-main {
@@ -2616,7 +2625,7 @@ h1, h2, h3, h4, h5, h6 {
   border-right: 1px solid #ced3d9;
 }
 
-.pager-simple .pager-box .micon {
+.pager-simple .pager-box .micon, .pager-simple .pager-box .ob-icon {
   margin-right: 0;
 }
 
@@ -3636,7 +3645,7 @@ button {
   height: 16px;
   text-indent: -999em;
   vertical-align: top;
-  background: url("//www.micstatic.com:2001/gb/img/icon/ico_files.png") no-repeat;
+  background: url("/common/img/icon/ico_files.png") no-repeat;
   background-position: 0px -270px;
 }
 
@@ -3682,7 +3691,7 @@ button {
   width: 16px;
   height: 16px;
   vertical-align: middle;
-  background: url("//www.micstatic.com:2001/gb/img/ico/loading-small.gif") no-repeat;
+  background: url("http://www.micstatic.com/gb/img/ico/loading-small.gif") no-repeat;
 }
 
 .obelisk-form .upload-file .upload-suc {
@@ -3691,7 +3700,7 @@ button {
   width: 16px;
   height: 16px;
   vertical-align: middle;
-  background: url("//www.micstatic.com:2001/gb/img/ico/ico_suc.png") no-repeat;
+  background: url("http://www.micstatic.com/gb/img/ico/ico_suc.png") no-repeat;
 }
 
 .obelisk-form .upload-file .file-name {
@@ -3824,7 +3833,7 @@ button {
   position: absolute;
   right: 0;
   bottom: 0;
-  background: url("//www.micstatic.com:2001/gb/img/icon/tag-selected.svg") no-repeat right bottom;
+  background: url("http://www.micstatic.com/gb/img/icon/tag-selected.svg") no-repeat right bottom;
   background-size: 12px 12px;
   z-index: 2;
 }
@@ -4180,6 +4189,15 @@ button {
   content: "\e001";
 }
 
+/*
+ * aid brush ��ɫ��ǳ ��ˢԽ����ɫԽ��
+ * [mini, tiny, small, medium, large, big, huge, massive]
+ */
+/*
+ * extend color
+ * Roman Numbers
+ * i: 1, ii: 2, iii: 3, iv: 4, v: 5, vi: 6, vii: 7, viii: 8, ix: 9, x: 10
+ */
 .select {
   min-width: 120px;
   padding-right: 26px;
@@ -4400,7 +4418,7 @@ the lib for select-flag in fake select
   display: inline-block;
   margin-right: 5px;
   font-size: 0;
-  background: url("//www.micstatic.com:2001/gb/img/icon/flags.png?t=20160627") no-repeat;
+  background: url("http://www.micstatic.com/gb/img/icon/flags.png?t=20160627") no-repeat;
 }
 
 .select-flags .select-flag-ad:before {
@@ -5437,6 +5455,235 @@ the lib for select-flag in fake select
 
 .select-flags .select-flag-tw:before {
   background-position: -64px -198px;
+}
+
+.ft-tour {
+  display: none;
+}
+
+.ft-tour .ft-cover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9998;
+  background: #000;
+  opacity: .7;
+  filter: alpha(opacity=70);
+}
+
+.ft-tour .ft-layer {
+  position: absolute;
+  z-index: 9999;
+  background: #fff;
+  transition: all 0.4s;
+}
+
+.ft-tour .ft-highlight {
+  width: 100%;
+  height: 100%;
+  z-index: 10001;
+  background: transparent;
+}
+
+.ft-tour .ft-box {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 100%;
+  background: transparent;
+  height: 100%;
+  padding: 9px;
+  border: 1px dashed #fff;
+  z-index: 10001;
+}
+
+.ft-tour .ft-box .ft-close {
+  position: absolute;
+  display: block;
+  width: 16px;
+  height: 16px;
+  top: -9px;
+  right: -9px;
+  color: #555;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  margin: 0;
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10003;
+}
+
+.ft-tour .ft-box .ft-inner {
+  position: absolute;
+  color: #fff;
+  width: 250px;
+}
+
+.ft-tour .ft-box .ft-inner .ft-words {
+  width: 210px;
+  padding: 0 20px;
+}
+
+.ft-tour .ft-box .ft-inner .ft-arr {
+  height: 80px;
+  width: 80px;
+  background: url("http://www.micstatic.com/gb/img/icon/tour-arrow.png") no-repeat;
+}
+
+.ft-tour .ft-box .ft-inner .ft-txt {
+  margin: 0;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.ft-tour .ft-box .ft-inner .ft-btnwrap {
+  margin-top: 10px;
+}
+
+.ft-tour .ft-box .ft-inner .tour-btn {
+  float: left;
+  height: 30px;
+  margin: 0 10px 0 0;
+  padding: 0 15px;
+  font-size: 12px;
+  line-height: 30px;
+  text-align: center;
+  background: #f5f7fa;
+  border: 0;
+  color: #222;
+  border-radius: 3px;
+}
+
+.ft-tour .ft-box .ft-inner .ft-close {
+  position: relative;
+  top: auto;
+  right: auto;
+  width: auto;
+}
+
+.ft-tour .ft-box .ft-inner .main-btn {
+  background: #e64545;
+  color: #fff;
+}
+
+.ft-tour .ft-box .ft-inner .tour-dot {
+  float: left;
+  height: 30px;
+}
+
+.ft-tour .ft-box .ft-inner .tour-dot i {
+  float: left;
+  width: 4px;
+  height: 4px;
+  border: 1px solid #ced3d9;
+  margin: 12px 5px 0 0;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.ft-tour .ft-box .ft-inner .tour-dot i.on {
+  background: #ced3d9;
+}
+
+.ft-tour .ft-box .ft-dir-cb {
+  top: 100%;
+  left: 50%;
+  margin-left: -125px;
+}
+
+.ft-tour .ft-box .ft-dir-cb .ft-arr {
+  margin: 0 auto;
+}
+
+.ft-tour .ft-box .ft-dir-ct {
+  bottom: 100%;
+  left: 50%;
+  margin-left: -125px;
+}
+
+.ft-tour .ft-box .ft-dir-ct .ft-arr {
+  margin: 0 auto;
+  background-position: -80px 0;
+}
+
+.ft-tour .ft-box .ft-dir-lt {
+  bottom: 100%;
+  left: -250px;
+}
+
+.ft-tour .ft-box .ft-dir-lt .ft-arr {
+  position: relative;
+  left: 100%;
+  margin-left: -80px;
+  background-position: -160px 0;
+}
+
+.ft-tour .ft-box .ft-dir-lc {
+  right: 100%;
+  width: 290px;
+  top: 50%;
+  margin-top: -40px;
+}
+
+.ft-tour .ft-box .ft-dir-lc .ft-arr {
+  float: right;
+  background-position: -240px 0;
+}
+
+.ft-tour .ft-box .ft-dir-lc .ft-words {
+  padding: 0;
+  float: left;
+}
+
+.ft-tour .ft-box .ft-dir-lb {
+  top: 100%;
+  left: -250px;
+}
+
+.ft-tour .ft-box .ft-dir-lb .ft-arr {
+  position: relative;
+  left: 100%;
+  margin-left: -80px;
+  background-position: 0 -80px;
+}
+
+.ft-tour .ft-box .ft-dir-rt {
+  bottom: 100%;
+  right: -250px;
+}
+
+.ft-tour .ft-box .ft-dir-rt .ft-arr {
+  background-position: -80px -80px;
+}
+
+.ft-tour .ft-box .ft-dir-rc {
+  left: 100%;
+  width: 290px;
+  top: 50%;
+  margin-top: -40px;
+}
+
+.ft-tour .ft-box .ft-dir-rc .ft-arr {
+  float: left;
+  background-position: -160px -80px;
+}
+
+.ft-tour .ft-box .ft-dir-rc .ft-words {
+  float: right;
+  padding: 0;
+}
+
+.ft-tour .ft-box .ft-dir-rb {
+  top: 100%;
+  right: -250px;
+}
+
+.ft-tour .ft-box .ft-dir-rb .ft-arr {
+  background-position: -240px -80px;
 }
 
 body {

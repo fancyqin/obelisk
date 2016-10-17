@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Input</title>
+    <!--include "_cssImport.html"-->
+</head>
+<body>
+
+<!--include "_nav.html"-->
+	
+	<div class="obelisk obelisk-form">
+		<h2>表单元素 
+            <div class="trigger-all">展开所有代码
+                <div class="input-toggle">
+                    <label class="input-wrap">
+                        <input class="J-codeTriggerAll" type="checkbox">
+                        <span class="input-ctnr"></span>
+                    </label>
+                </div>
+            </div>
+        </h2>
+        <h3>引用</h3>
+        <div class="sample-block">
+            <div class="highlight J-highlight">
+@import "$${path.common}/obelisk/lib/_input.scss";
+            </div>    
+        </div>
+        
+
+
+
+		<h3>基础表格</h3>
+        <div id="code-1">
+            <div class="ob-code">
+
+            </div>
+        </div>
+
+        <h3>一般表格</h3>
+        <div id="code-2">
+            <div class="ob-code">
+
+
+            </div>
+        </div>
+
+        <h3>特殊配置</h3>
+        <div id="code-3">
+            <div class="ob-code">
+
+
+            </div>
+            <div class="ob-info">
+                <h5 class="sub-title"><span>说明</span></h5>
+
+            </div>
+        </div>
+
+
+	</div>
+
+
+
+
+    <script src="src/js/asset/ace/ace.js"></script>
+    <script src="src/js/asset/ace/ext-static_highlight.js"></script>
+    <!--<script src="src/js/asset/ace/ext-beautify.js"></script>-->
+    <script src="src/js/asset/clipboard/clipboard.min.js"></script>
+    <script src="src/js/code.js"></script>
+    
+	<script>
+        new Obdemo({items:[{elId:'code-1'},{elId:'code-2'},{elId:'code-3'}]});
+    </script>
+
+</body>
+</html>

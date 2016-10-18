@@ -23,36 +23,293 @@
         <h3>引用</h3>
         <div class="sample-block">
             <div class="highlight J-highlight">
-@import "$${path.common}/obelisk/lib/_input.scss";
+@import "$${path.common}/obelisk/lib/_input";
+            </div>
+            <div class="tips">
+                <p><b>注意 :</b> 表单元素中所有样式，需要在外层form或其他层添加 <b> class="obelisk-form" </b></p>
             </div>    
         </div>
         
 
+        <h3>文本框</h3>
+        <div id="code-0">
+            <div class="ob-code">
+<input type="text" class="input-text span-9" placeholder="Search Products">
+<div class="text-item span-9">
+    <label class="input-wrap">
+        <span class="input-head">US$</span>
+        <div class="input-cnt">
+            <input type="text" class="input-text" placeholder="FOB Price">
+            <span class="input-ctnr"></span>
+        </div>
+    </label>
+</div>
+<hr>
+<input type="text" disabled class="input-text span-9">
+<div class="text-item span-9">
+    <label class="input-wrap">
+        <span class="input-head">US$</span>
+        <div class="input-cnt">
+            <input type="text" class="input-text" placeholder="FOB Price" disabled>
+            <span class="input-ctnr"></span>
+        </div>
+    </label>
+</div>
+<hr>
+<input type="text" class="input-text span-9 error">
+<div class="text-item span-9">
+    <label class="input-wrap">
+        <span class="input-head">US$</span>
+        <div class="input-cnt">
+            <input type="text" class="input-text error" placeholder="FOB Price">
+            <span class="input-ctnr"></span>
+        </div>
+    </label>
+</div>
+<div class="fields-text">Pieces</div>
+<div class="feedback-block">
+    <label class="error">Please enter the product name.</label>
+</div>
+<hr>
+<input type="text" class="input-text span-9">
+<div class="feedback-block">
+    <label class="warning">Please enter the product name.</label>
+</div>
+            </div>
+        </div>
 
 
-		<h3>基础表格</h3>
+
+
+
+
+		<h3>复选框、单选框</h3>
         <div id="code-1">
             <div class="ob-code">
-
+<div class="input-checkbox">
+    <label class="input-wrap">
+        <input type="checkbox">
+        <span class="input-ctnr"></span> A
+    </label>
+    <label class="input-wrap">
+        <input type="checkbox" checked>
+        <span class="input-ctnr"></span> B
+    </label>
+    <label class="input-wrap">
+        <input type="checkbox" disabled>
+        <span class="input-ctnr"></span> C
+    </label>
+    <label class="input-wrap">
+        <input type="checkbox" checked disabled >
+        <span class="input-ctnr"></span> D
+    </label>
+</div>
+<div class="input-radio">
+    <label class="input-wrap">
+        <input type="radio" name="sex">
+        <span class="input-ctnr"></span> 希拉里
+    </label>
+    <label class="input-wrap">
+        <input type="radio" name="sex">
+        <span class="input-ctnr"></span> 川普
+    </label>
+    <label class="input-wrap">
+        <input type="radio" name="sex" disabled>
+        <span class="input-ctnr"></span> 未知
+    </label>
+    <label class="input-wrap">
+        <input type="radio" name="sex" checked disabled>
+        <span class="input-ctnr"></span> 未知
+    </label>
+</div>
             </div>
         </div>
 
-        <h3>一般表格</h3>
+        <h3>开关</h3>
         <div id="code-2">
             <div class="ob-code">
-
-
+<div class="input-toggle">
+    <label class="input-wrap">
+        <input type="checkbox">
+        <span class="input-ctnr"></span>
+    </label>
+    <label class="input-wrap">
+        <input type="checkbox" disabled>
+        <span class="input-ctnr"></span>
+    </label>
+    <label class="input-wrap">
+        <input type="checkbox" checked disabled>
+        <span class="input-ctnr"></span>
+    </label>
+</div>
             </div>
         </div>
 
-        <h3>特殊配置</h3>
+        <h3>标签</h3>
         <div id="code-3">
             <div class="ob-code">
-
-
+<div class="input-tag">
+    <label class="input-wrap">
+        <input type="checkbox">
+        <span class="input-ctnr cut" style="width:100px;">橘子橘子橘子橘子橘子橘子橘子橘子橘子橘子橘子橘子橘子橘子橘子橘子橘子橘子橘子</span>
+    </label>
+    <label class="input-wrap">
+        <input type="checkbox">
+        <span class="input-ctnr">橘子</span>
+    </label>
+    <label class="input-wrap">
+        <input type="checkbox" checked>
+        <span class="input-ctnr">番茄</span>
+    </label>
+    <label class="input-wrap">
+        <input type="checkbox" disabled>
+        <span class="input-ctnr">橙子</span>
+    </label>
+    <label class="input-wrap">
+        <input type="checkbox" checked disabled>
+        <span class="input-ctnr">苹果</span>
+    </label><br>
+    <label class="input-wrap">
+        <input type="checkbox" checked disabled>
+        <span class="input-ctnr">苹果</span>
+    </label>
+</div>
+<hr>
+<div class="input-tag">
+    <label class="input-wrap input-wrap-small">
+        <input type="checkbox">
+        <span class="input-ctnr cut" style="width:100px;">橘子橘子橘子橘子橘子橘子橘子橘子橘子橘子橘子橘子橘子橘子橘子橘子橘子橘子橘子</span>
+    </label>
+    <label class="input-wrap input-wrap-small">
+        <input type="checkbox">
+        <span class="input-ctnr">橘子</span>
+    </label>
+    <label class="input-wrap input-wrap-small">
+        <input type="checkbox" checked>
+        <span class="input-ctnr">番茄</span>
+    </label>
+    <label class="input-wrap input-wrap-small">
+        <input type="checkbox" disabled>
+        <span class="input-ctnr">橙子</span>
+    </label>
+    <label class="input-wrap input-wrap-small">
+        <input type="checkbox" checked disabled>
+        <span class="input-ctnr">苹果</span>
+    </label><br>
+    <label class="input-wrap input-wrap-small">
+        <input type="checkbox" checked disabled>
+        <span class="input-ctnr">苹果</span>
+    </label>
+</div>
+<hr>
+<div class="input-tag">
+    <label class="input-wrap">
+        <input type="radio" name="radioTag">
+        <span class="input-ctnr">橘子</span>
+    </label>
+    <label class="input-wrap">
+        <input type="radio" name="radioTag" checked>
+        <span class="input-ctnr">番茄</span>
+    </label>
+    <label class="input-wrap">
+        <input type="radio" name="radioTag" disabled>
+        <span class="input-ctnr">橙子</span>
+    </label>
+    <label class="input-wrap">
+        <input type="radio" name="radioTag" checked disabled>
+        <span class="input-ctnr">苹果</span>
+    </label>
+</div>
+<hr>
+<div class="input-tag">
+    <label class="input-wrap input-wrap-small">
+        <input type="radio" name="radioTag">
+        <span class="input-ctnr">橘子</span>
+    </label>
+    <label class="input-wrap input-wrap-small">
+        <input type="radio" name="radioTag" checked>
+        <span class="input-ctnr">番茄</span>
+    </label>
+    <label class="input-wrap input-wrap-small">
+        <input type="radio" name="radioTag" disabled>
+        <span class="input-ctnr">橙子</span>
+    </label>
+    <label class="input-wrap input-wrap-small">
+        <input type="radio" name="radioTag" checked disabled>
+        <span class="input-ctnr">苹果</span>
+    </label>
+</div>
             </div>
-            <div class="ob-info">
-                <h5 class="sub-title"><span>说明</span></h5>
+        </div>
+
+
+        <h3>文本域</h3>
+        <div id="code-4">
+            <div class="ob-code">            
+<textarea class="input-textarea span-18" cols="80" rows="6"></textarea>
+<p class="prompt">4000字以内。</p>
+<hr>
+<div class="textarea-field">
+    <textarea class="input-textarea span-18" cols="80" rows="6"></textarea>
+    <div class="field">
+        <div class="edit-wrap">
+            <!-- <div class="edit selected"> -->
+            <div class="edit">
+                <div class="edit-hd">
+                    Edit
+                    <i class="micon">&#xe006;</i>
+                </div>
+                <div class="edit-bd">
+                    <a href="">Insert Special Characters</a>
+                    <a href="">Insert Special Characters</a>
+                </div>
+            </div>
+            <div class="upload">
+                <i class="micon">&#xe02f;</i> Upload Images / Files (0/3)
+                <input type="file" class="file">
+                <i class="micon">&#xe004;</i>
+            </div>
+        </div>
+        <!-- <p class="prompt">Maximum 3 Files, and each file 5M max.
+            <br> Format : Jpg, jpeg, gif, bmp, png, pdf, xls, doc, txt, xlsx, docx.</p> -->
+        <div class="feedback-block">
+            <label class="error">Sorry, you can only upload 3 files max.</label>
+        </div>
+        <div class="file-list">
+            <div class="file-block">
+                <div class="upload-file">
+                    <a href="javascript" class="del"><i class="micon">&#xe00c;</i></a>
+                    <span class="ico ico-png"></span>
+                    <span>Chrysanthemum.png</span>
+                </div>
+                <div class="preview" style="display:none;">
+                    <span class="img-cnt">
+                        <img src="http://design.vemic.com:2222/100x70" style="width:100px; height:70px" alt="">
+                    </span>
+                </div>
+            </div>
+            <div class="file-block">
+                <div class="upload-file" style="display:none;">
+                    <a href="javascript:;" class="del"><i class="micon">&#xe00c;</i></a>
+                    <span class="ico ico-png"></span>
+                    <span>Chrysanthemum.png</span>
+                </div>
+                <div class="preview" style="display:none;">
+                    <span class="img-cnt">
+                        <img src="http://design.vemic.com:2222/100x70" style="width:100px; height:70px" alt="">
+                    </span>
+                </div>
+                <div class="file-loading">
+                    <div class="loading">
+                        <div class="loading-bar" data-valuemin="0" data-valuemax="100" data-valuenow="60" style="width:60%;"></div>
+                    </div>
+                    <a href="" class="cancel"><i class="micon">&#xe00c;</i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
             </div>
         </div>
@@ -70,7 +327,7 @@
     <script src="src/js/code.js"></script>
     
 	<script>
-        new Obdemo({items:[{elId:'code-1'},{elId:'code-2'},{elId:'code-3'}]});
+        new Obdemo({items:[{elId:'code-0'},{elId:'code-1'},{elId:'code-2'},{elId:'code-3'},{elId:'code-4'}]});
     </script>
 
 </body>

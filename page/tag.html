@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Pager</title>
+    <title>Tag</title>
     <!--include "_cssImport.html"-->
 </head>
 <body>
 	
 <!--include "_nav.html"-->
-
+    
 	<div class="obelisk obelisk-form">
-		<h2>分页
+		<h2>标签
             <div class="trigger-all">展开所有代码
                 <div class="input-toggle">
                     <label class="input-wrap">
@@ -23,48 +23,32 @@
         <h3>引用</h3>
         <div class="sample-block">
             <div class="highlight J-highlight">
-@import "$${path.common}/obelisk/module/_pager";
+@import "$${path.common}/obelisk/module/_tag";
             </div>    
         </div>
 
-		<h3>一般分页</h3>
+		<h3>标签</h3>
         <div id="code-1">
             <div class="ob-code">
-<div class="pager">
-    <a href="" disabled><i class="ob-icon icon-left"></i></a>
-    <a href="">1</a>
-    <a href="">2</a>
-    <a href="">3</a>
-    <a href="">4</a>
-    <span class="current">5</span>
-    <a href="">6</a>
-    <a href="">7</a>
-    <a href="">8</a>
-    <span class="dot"><i class="ob-icon icon-more"></i></span>
-    <a href="">999</a>
-    <a href="" class="main">Next <i class="ob-icon icon-right"></i></a>
-</div>
+<a href="" class="tag tag-large tag-radio ">test tag</a>
+<a href="" class="tag tag-large tag-radio  selected">test tag</a>
+<a href="" class="tag tag-small tag-radio ">test tag</a>
+<a href="" class="tag tag-small tag-radio  selected">test tag</a>
+<hr>
+<span class="tag tag-small tag-color tag-blue">test tag</span>
+<span class="tag tag-small tag-color tag-azure">test tag</span>
+<span class="tag tag-small tag-color tag-green">test tag</span>
+<span class="tag tag-small tag-color tag-purple">test tag</span>
+<span class="tag tag-small tag-color tag-red">test tag</span>
+<span class="tag tag-small tag-color tag-yellow">test tag</span>
+<span class="tag tag-small tag-color tag-grey">test tag</span>
+<hr>
+<a href="" class="tag tag-small tag-link">test tag</a>
+<hr>
+<span class="tag tag-small tag-with-delete">test tag<i class="ob-icon icon-delete"></i></span>
+<span class="tag tag-large tag-with-delete">test tag<i class="ob-icon icon-delete"></i></span>
             </div>
-        </div>
-
-
-
-
-
-        <h3>简化分页</h3>
-
-        <div id="code-2">
-            <div class="ob-code">
- <div class="pager-simple">
-    <span class="page-num">1/999 页</span>
-    <div class="pager-box cf">
-        <a href=""><i class="ob-icon icon-left"></i></a>
-        <a href=""><i class="ob-icon icon-right"></i></a>
-    </div>
-</div>               
-            </div>
-        </div>
-
+        </div>        
 
 
 
@@ -80,11 +64,8 @@
     <script src="src/js/code.js"></script>
     
 	<script>
-        new Obdemo({items:[{elId:'code-1'},{elId:'code-2'}]});
+        new Obdemo({items:[{elId:'code-1'}]});
     </script>
-
-
-    
 	
 </body>
 </html>

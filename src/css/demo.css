@@ -3645,7 +3645,7 @@ button {
   height: 16px;
   text-indent: -999em;
   vertical-align: top;
-  background: url("/common/img/icon/ico_files.png") no-repeat;
+  background: url("http://www.micstatic.com/gb/img/icon/ico_files.png") no-repeat;
   background-position: 0px -270px;
 }
 

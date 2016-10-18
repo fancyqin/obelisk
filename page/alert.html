@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alert</title>
+    <!--include "_cssImport.html"-->
+</head>
+<body>
+	
+<!--include "_nav.html"-->
+    
+	<div class="obelisk obelisk-form">
+		<h2>提示信息
+            <div class="trigger-all">展开所有代码
+                <div class="input-toggle">
+                    <label class="input-wrap">
+                        <input class="J-codeTriggerAll" type="checkbox">
+                        <span class="input-ctnr"></span>
+                    </label>
+                </div>
+            </div>
+        </h2>
+        <h3>引用</h3>
+        <div class="sample-block">
+            <div class="highlight J-highlight">
+@import "$${path.common}/obelisk/module/_tag";
+            </div>    
+        </div>
+        
+		<h3>提示</h3>
+        <div id="code-4">
+            <div class="ob-code">
+<div class="alert-new">
+    <div class="alert-con alert-err alert-state">
+        <span class="micon-state"><i class="ob-icon icon-error"></i></span>
+        <span class="alert-txt">Please enter you name!</span>
+    </div>
+    <div class="alert-con alert-err alert-state alert-del">
+        <span class="micon-state"><i class="ob-icon icon-error"></i></span>
+        <span class="alert-txt">Please enter you name!</span>
+        <a href="" class="micon-del"><i class="ob-icon icon-delete"></i></a>
+    </div>
+    <hr>
+    <div class="alert-con alert-warn alert-state">
+        <span class="micon-state"><i class="ob-icon icon-caution"></i></span>
+        <span class="alert-txt">Please enter you name!</span>
+    </div>
+    <div class="alert-con alert-warn alert-state alert-del">
+        <span class="micon-state"><i class="ob-icon icon-caution"></i></span>
+        <span class="alert-txt">Please enter you name!</span>
+        <a href="" class="micon-del"><i class="ob-icon icon-delete"></i></a>
+    </div>
+    <hr>
+    <div class="alert-con alert-succ alert-state">
+        <span class="micon-state"><i class="ob-icon icon-yes"></i></span>
+        <span class="alert-txt">Please enter you name!</span>
+    </div>
+    <div class="alert-con alert-succ alert-state alert-del">
+        <span class="micon-state"><i class="ob-icon icon-yes"></i></span>
+        <span class="alert-txt">Please enter you name!</span>
+        <a href="" class="micon-del"><i class="ob-icon icon-delete"></i></a>
+    </div>
+    <hr>
+    <div class="alert-con alert-info alert-state">
+        <span class="micon-state"><i class="ob-icon icon-info"></i></span>
+        <span class="alert-txt">Please enter you name!</span>
+    </div>
+    <div class="alert-con alert-info alert-state alert-del">
+        <span class="micon-state"><i class="ob-icon icon-info"></i></span>
+        <span class="alert-txt">Please enter you name!</span>
+        <a href="" class="micon-del"><i class="ob-icon icon-delete"></i></a>
+    </div>
+</div>
+            </div>
+        </div> 
+
+
+		<h3>辅助说明</h3>
+        <div id="code-1">
+            <div class="ob-code">
+<div style="height:300px;position:relative;text-align:center;line-height:300px;">
+    明明是我的风筝 却嫁给了蓝天 线断了 思念没断 风停了 思念没停 春过了 我还在仰望 
+    <div class="tip arrow-top" style="top:170px;left:50%;width:200px;margin-left:-18px;">
+        <div class="tip-con">
+            <p class="tip-para">I only wish to face the sea, with spring flowers blossoming.</p>
+        </div>
+        <span class="arrow arrow-out">
+            <span class="arrow arrow-in"></span>
+        </span>
+    </div>
+    <div class="tip arrow-bottom" style="top:60px;left:50%;width:200px;margin-left:-18px;">
+        <div class="tip-con">
+            <p class="tip-para">我有三次受难：流浪、爱情、生存</p>
+            <p class="tip-para">我有三种幸福：诗歌、王位、太阳 </p>
+        </div>
+        <span class="arrow arrow-out">
+            <span class="arrow arrow-in"></span>
+        </span>
+    </div>
+    <div class="tip arrow-left" style="top:130px;left:50%;width:300px;margin-left:235px;">
+        <div class="tip-con">
+            <p class="tip-para">远方除了遥远一无所有 </p>
+            <p class="tip-para">遥远的青稞地&nbsp;除了青稞&nbsp;一无所有</p>
+            <p class="tip-para">更远的地方&nbsp;更加寂寞&nbsp;远方啊&nbsp;除了遥远&nbsp;一无所有</p>
+        </div>
+        <span class="arrow arrow-out">
+            <span class="arrow arrow-in"></span>
+        </span>
+    </div>
+    <div class="tip arrow-right" style="top:130px;left:50%;width:300px;margin-left:-560px;">
+        <div class="tip-con">
+            <p class="tip-para">秋天深了&nbsp;神的家中鹰在集合&nbsp;
+                神的故乡鹰在言语&nbsp;
+                秋天深了&nbsp;王在写诗</p>
+        </div>
+        <span class="arrow arrow-out">
+            <span class="arrow arrow-in"></span>
+        </span>
+    </div>
+</div>
+            </div>
+        </div>        
+
+		<h3>自动消失</h3>
+        <div id="code-2">
+            <div class="ob-code">
+<div class="alert-new">
+    <div class="alert-con alert-disappear succ">
+        <span class="alert-txt">Please enter you name!</span>
+    </div>
+    <div class="alert-con alert-disappear err">
+        <span class="alert-txt">Please enter you name!</span>
+    </div>
+    <div class="alert-con alert-disappear warn">
+        <span class="alert-txt">Please enter you name!</span>
+    </div>
+</div>
+            </div>
+        </div>
+
+		<h3>弹窗提示</h3>
+        <div id="code-3">
+            <div class="ob-code">
+<div class="dialog-alert dialog-warn">
+    <span class="dialog-micon-state"><i class="ob-icon icon-caution"></i></span>
+    <div class="dialog-alert-con">
+        this is a dislog alert!
+    </div>
+</div>
+<div class="dialog-alert dialog-succ">
+    <span class="dialog-micon-state"><i class="ob-icon icon-yes"></i></span>
+    <div class="dialog-alert-con">
+        this is a dislog alert!
+    </div>
+</div>
+<div class="dialog-alert dialog-info">
+    <span class="dialog-micon-state"><i class="ob-icon icon-info"></i></span>
+    <div class="dialog-alert-con">
+        this is a dislog alert!
+    </div>
+</div>
+<div class="dialog-alert dialog-err">
+    <span class="dialog-micon-state"><i class="ob-icon icon-error"></i></span>
+    <div class="dialog-alert-con">
+        this is a dislog alert!
+    </div>
+</div>
+            </div>
+        </div>
+
+		<h3>弹窗提示</h3>
+        <div id="code-5">
+            <div class="ob-code">
+<div style="margin-top:20px;height:40px; width: 22%; display:inline-block;">
+    <div class="tip icon-tip arrow-top tip-black">
+        <div class="tip-con">
+            sample
+        </div>
+            <span class="arrow">
+            </span>
+    </div>
+</div>
+<div style="margin-top:20px;height:40px; width: 22%; display:inline-block;">
+    <div class="tip icon-tip arrow-bottom tip-black">
+        <div class="tip-con">
+            sample
+        </div>
+            <span class="arrow">
+            </span>
+    </div>
+</div>
+<div style="margin-top:20px;height:40px; width: 22%; display:inline-block;">
+    <div class="tip icon-tip arrow-left tip-black">
+        <div class="tip-con">
+            sample
+        </div>
+            <span class="arrow">
+            </span>
+    </div>
+</div>
+<div style="margin-top:20px;height:40px; width: 22%; display:inline-block;">
+    <div class="tip icon-tip arrow-right tip-black">
+        <div class="tip-con">
+            sample
+        </div>
+            <span class="arrow">
+            </span>
+    </div>
+</div>
+            </div>
+        </div>
+
+
+	</div>
+
+
+
+
+    <script src="src/js/asset/ace/ace.js"></script>
+    <script src="src/js/asset/ace/ext-static_highlight.js"></script>
+    <!--<script src="src/js/asset/ace/ext-beautify.js"></script>-->
+    <script src="src/js/asset/clipboard/clipboard.min.js"></script>
+    <script src="src/js/code.js"></script>
+    
+	<script>
+        new Obdemo({items:[{elId:'code-1'},{elId:'code-2'},{elId:'code-3'},{elId:'code-4'},{elId:'code-5'}]});
+    </script>
+	
+</body>
+</html>

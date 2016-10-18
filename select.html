@@ -25,7 +25,7 @@
 </div>
 
 	<div class="obelisk obelisk-form">
-		<h2>分页
+		<h2>下拉框
             <div class="trigger-all">展开所有代码
                 <div class="input-toggle">
                     <label class="input-wrap">
@@ -38,47 +38,29 @@
         <h3>引用</h3>
         <div class="sample-block">
             <div class="highlight J-highlight">
-@import "$${path.common}/obelisk/module/_pager";
+@import "$${path.common}/obelisk/lib/_select";
             </div>    
         </div>
-
-		<h3>一般分页</h3>
+            
+		<h3>一般下拉框</h3>
         <div id="code-1">
             <div class="ob-code">
-<div class="pager">
-    <a href="" disabled><i class="ob-icon icon-left"></i></a>
-    <a href="">1</a>
-    <a href="">2</a>
-    <a href="">3</a>
-    <a href="">4</a>
-    <span class="current">5</span>
-    <a href="">6</a>
-    <a href="">7</a>
-    <a href="">8</a>
-    <span class="dot"><i class="ob-icon icon-more"></i></span>
-    <a href="">999</a>
-    <a href="" class="main">Next <i class="ob-icon icon-right"></i></a>
+<div class="use-select">
+    <select name="" id="" select-css="span10">
+        <option value="111">1111111</option>
+        <option value="222">22222222222222</option>
+        <option value="333">3333</option>
+    </select>
 </div>
+
             </div>
         </div>
-
-
-
-
-
-        <h3>简化分页</h3>
-
+        <h3>功能下拉框</h3>
         <div id="code-2">
-            <div class="ob-code">
- <div class="pager-simple">
-    <span class="page-num">1/999 页</span>
-    <div class="pager-box cf">
-        <a href=""><i class="ob-icon icon-left"></i></a>
-        <a href=""><i class="ob-icon icon-right"></i></a>
-    </div>
-</div>               
+            <div class="ob-code">               
             </div>
         </div>
+
 
 
 
@@ -90,12 +72,21 @@
 
     <script src="src/js/asset/ace/ace.js"></script>
     <script src="src/js/asset/ace/ext-static_highlight.js"></script>
-    <!--<script src="src/js/asset/ace/ext-beautify.js"></script>-->
     <script src="src/js/asset/clipboard/clipboard.min.js"></script>
+    <script src="http://www.micstatic.com/gb/js/libs/jquery.js"></script>
+    <script src="http://www.micstatic.com/gb/js/assets/template/template.js"></script>
+    <script src="http://www.micstatic.com/gb/js/business/global/util.js"></script>
+    <script src="http://www.micstatic.com/gb/js/assets/observe/observe.js"></script>
+    <script src="http://www.micstatic.com/gb/js/assets/select2/select.js"></script>
     <script src="src/js/code.js"></script>
     
 	<script>
-        new Obdemo({items:[{elId:'code-1'},{elId:'code-2'}]});
+        new Obdemo({
+            items:[{elId:'code-1'},{elId:'code-2'}],
+            cb: function(){
+                Select.use('.use-select select')
+            }
+        });
     </script>
 
 

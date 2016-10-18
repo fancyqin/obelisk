@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pager</title>
+    <link rel="stylesheet" href="http://www.micstatic.com/gb/out/demo.css">
+<!--<link rel="stylesheet" href="src/css/demo.css">-->
+<link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+	
+<div class="ob-nav">
+    <ul>
+        <li><a href="input.html">表单</a></li>
+        <li><a href="table.html">表格</a></li>
+        <li><a href="calendar.html">日历</a></li>
+        <li><a href="button.html">按钮</a></li>
+        <li><a href="select.html">下拉框</a></li>
+        <li><a href="tag.html">标签</a></li>
+        <li><a href="alert.html">提示信息</a></li>        
+        <li><a href="pager.html">分页</a></li>
+        <li><a href="step.html">流程指引</a></li>
+        <li><a href="tour.html">新手指引</a></li>
+    </ul>
+</div>
+
+	<div class="obelisk obelisk-form">
+		<h2>按钮
+            <div class="trigger-all">展开所有代码
+                <div class="input-toggle">
+                    <label class="input-wrap">
+                        <input class="J-codeTriggerAll" type="checkbox">
+                        <span class="input-ctnr"></span>
+                    </label>
+                </div>
+            </div>
+        </h2>
+        <h3>引用</h3>
+        <div class="sample-block">
+            <div class="highlight J-highlight">
+@import "$${path.common}/obelisk/lib/_button";
+            </div>    
+        </div>
+
+		<h3>一般按钮</h3>
+        <div id="code-1">
+            <div class="ob-code">
+<div class="btn btn-big">Submit</div>
+<div class="btn btn-big"><i class="ob-icon icon-mail"></i>Send</div>
+<span class="btn btn-big btn-disabled">Submit</span>
+<span class="btn btn-big btn-disabled"><i class="ob-icon icon-mail"></i>Send</span>
+<hr>
+<div class="btn">Submit</div>
+<div class="btn"><i class="ob-icon icon-mail"></i>Send</div>
+<span class="btn btn-disabled">Submit</span>
+<span class="btn btn-disabled"><i class="ob-icon icon-mail"></i>Send</span>
+<hr>
+<div class="btn btn-small">Submit</div>
+<div class="btn btn-small"><i class="ob-icon icon-mail"></i>Send</div>
+<span class="btn btn-small btn-disabled">Submit</span>
+<span class="btn btn-small btn-disabled"><i class="ob-icon icon-mail"></i>Send</span>
+                 
+            </div>
+        </div>
+        <h3>功能按钮</h3>
+        <div id="code-2">
+            <div class="ob-code">
+<a href="javascript:void(0)" class="btn btn-main btn-big">Submit</a>
+<a href="javascript:void(0)" class="btn btn-main btn-big"><i class="ob-icon icon-mail"></i>Send</a>
+<button class="btn btn-aux btn-big">Submit</button>
+<button class="btn btn-aux btn-big"><i class="ob-icon icon-mail"></i>Send</button>
+<a href="javascript:void(0)" class="btn btn-inquiry btn-big">Submit</a>
+<a href="javascript:void(0)" class="btn btn-inquiry btn-big"><i class="ob-icon icon-mail"></i>Send</a>
+<hr>
+<a href="javascript:void(0)" class="btn btn-main">Submit</a>
+<a href="javascript:void(0)" class="btn btn-main"><i class="ob-icon icon-mail"></i>Send</a>
+<button class="btn btn-aux">Submit</button>
+<button class="btn btn-aux"><i class="ob-icon icon-mail"></i>Send</button>
+<a href="javascript:void(0)" class="btn btn-inquiry">Submit</a>
+<a href="javascript:void(0)" class="btn btn-inquiry"><i class="ob-icon icon-mail"></i>Send</a>
+<hr>
+<a href="javascript:void(0)" class="btn btn-main btn-small">Submit</a>
+<a href="javascript:void(0)" class="btn btn-main btn-small"><i class="ob-icon icon-mail"></i>Send</a>
+<button class="btn btn-aux btn-small">Submit</button>
+<button class="btn btn-aux btn-small"><i class="ob-icon icon-mail"></i>Send</button>
+<a href="javascript:void(0)" class="btn btn-inquiry btn-small">Submit</a>
+<a href="javascript:void(0)" class="btn btn-inquiry btn-small"><i class="ob-icon icon-mail"></i>Send</a>                  
+            </div>
+        </div>
+
+
+
+
+
+	</div>
+
+
+
+
+    <script src="src/js/asset/ace/ace.js"></script>
+    <script src="src/js/asset/ace/ext-static_highlight.js"></script>
+    <!--<script src="src/js/asset/ace/ext-beautify.js"></script>-->
+    <script src="src/js/asset/clipboard/clipboard.min.js"></script>
+    <script src="src/js/code.js"></script>
+    
+	<script>
+        new Obdemo({items:[{elId:'code-1'},{elId:'code-2'}]});
+    </script>
+
+
+    
+	
+</body>
+</html>

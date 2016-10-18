@@ -8,7 +8,7 @@ void function () {
     };
 
     var renderHTML = '<div class="sample-block J-sample">' +
-        '<h5 class="sub-title"><span>示例</span></h5>' +
+        '<h5 class="sub-title" style="display:none;"><span>示例</span></h5>' +
         '<div class="sample J-sampleBox">' + '{{code}}' + '</div>' +
         '<h5 class="sub-title"><span>代码</span><div class="input-toggle"><label class="input-wrap"><input class="J-codeTrigger" type="checkbox"><span class="input-ctnr"></span></label></div></h5>' +
         '<div class="J-codeBox code-box">' +

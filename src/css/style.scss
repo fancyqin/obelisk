@@ -66,7 +66,7 @@ body{
         margin: 10px 0;
         border: 1px solid #ccc;
         background: #f3f5f7;
-        color: #555;
+        color: #888;
         border-radius: 10px;
         }
         .input-toggle{
@@ -88,6 +88,11 @@ body{
         background: #fff;
         padding: 30px;
         box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.1);
+        hr{
+            padding: 10px 0;
+            background: transparent;  
+            border: 0;
+        }
     }
     .tips{
         border: 1px dashed #ddd;

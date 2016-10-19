@@ -35,12 +35,7 @@
                 </div>
             </div>
         </h2>
-        <h3>引用</h3>
-        <div class="sample-block">
-            <div class="highlight J-highlight">
-@import "$${path.common}/obelisk/module/_tour";
-            </div>    
-        </div>
+
         
 
 
@@ -51,7 +46,7 @@
 <div class="tour-test">
     <button id="J-tourBegin" class="btn J-step-3" style="margin:10px 0;">开始指引</button>
     <hr>
-    <div class="J-step-1 tag tag-small tag-color tag-blue" style="margin:10px 0;">yes come on</div>
+    <div class="J-step-1 tag tag-small tag-color tag-blue" style="margin:10px 0;">把大象放进冰箱</div>
 </div>
             </div>
             <div class="ob-info">
@@ -67,7 +62,7 @@ var tour = new Tour({
     },{
         elem:".J-step-2",
         html:'第二步，把大象放进去',
-        dir:"ws"
+        dir:"sw"
     },{
         elem:'.J-step-3',
         html:'第三步，把冰箱门关闭',
@@ -88,7 +83,7 @@ $('#J-tourBegin').click(function(){
                     <h4>steps: [Obj,Obj1,...]</h4>
                     <p>Obj.<b>elem</b> : &lt; string &gt; 该步骤中高亮元素<br>
                         Obj.<b>html</b> : &lt; string &gt; 该步骤中说明文字<br>
-                        Obj.<b>dir</b> : &lt; string &gt; 说明文字显示位置：共八个方向按地图东南西北缩写表示："N","S","W","E","NW","NE","WS","ES" ，默认"S",即下方。<br>
+                        Obj.<b>dir</b> : &lt; string &gt; 说明文字显示位置：共八个方向按地图东南西北缩写表示："N","S","W","E","NW","NE","SW","SE" ，默认"S",即下方。<br>
                         Obj.<b>css</b> : &lt; object &gt; 附加样式<br>
                         Obj.<b>offset</b> : &lt; string &gt; 位置调整<br>
                         Obj.<b>before</b> : &lt; function(resolve){} &gt; Promise<br>
@@ -112,16 +107,27 @@ $('#J-tourBegin').click(function(){
                     <h4>tour.hide(silent)</h4>
                     <p>隐藏指引</p>
                     <h4>tour.dispose()</h4>
-                    <p></p>
+                    <p>销毁</p>
                     <h4>tour.resetCss()</h4>
                     <p>重置css样式</p>
 
-                    
-                        
-                    
+                                          
                     
                 </div>
             </div>
+        </div>
+
+        <h3>引用</h3>
+        <div class="sample-block">
+            <div class="highlight J-highlight">
+@import "$${path.common}/obelisk/module/_tour";
+            </div>
+            <div class="highlight J-highlight" ace-mode="ace/mode/html">
+&lt;mstatic:script type="text/javascript" src="/common/js/libs/jquery.js" charset="utf-8"&gt;&lt;/mstatic:script&gt;
+&lt;mstatic:script type="text/javascript" src="/common/js/assets/observe/observe.js" charset="utf-8"&gt;&lt;/mstatic:script&gt;
+&lt;mstatic:script type="text/javascript" src="/common/js/assets/simplePromise/simplePromise.js" charset="utf-8"&gt;&lt;/mstatic:script&gt;
+&lt;mstatic:script type="text/javascript" src="/common/js/assets/tour/tour.js" charset="utf-8"&gt;&lt;/mstatic:script&gt;
+            </div>  
         </div>
 
 	</div>
@@ -160,7 +166,7 @@ $('#J-tourBegin').click(function(){
                 },{
                     elem:".J-step-2",
                     html:'第二步，把大象放进去',
-                    dir:"ws"
+                    dir:"sw"
                 },{
                     elem:'.J-step-3',
                     html:'第三步，把冰箱门关闭',

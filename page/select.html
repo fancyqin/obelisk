@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Pager</title>
+    <title>Select</title>
     <!--include "_cssImport.html"-->
 </head>
 <body>
@@ -20,34 +20,230 @@
                 </div>
             </div>
         </h2>
-        <h3>引用</h3>
-        <div class="sample-block">
-            <div class="highlight J-highlight">
-@import "$${path.common}/obelisk/lib/_select";
-            </div>    
-        </div>
+
             
 		<h3>一般下拉框</h3>
         <div id="code-1">
             <div class="ob-code">
-<div class="use-select">
-    <select name="" id="" select-css="span10">
-        <option value="111">1111111</option>
-        <option value="222">22222222222222</option>
-        <option value="333">3333</option>
-    </select>
-</div>
-
+<select name="" id="" select-css="span-9">
+    <option value="111">1111111</option>
+    <option value="222">22222222222222</option>
+    <option value="333" disabled>3333</option>
+</select>
             </div>
         </div>
-        <h3>功能下拉框</h3>
+        <h3>tab页下拉框</h3>
         <div id="code-2">
-            <div class="ob-code">               
+            <div class="ob-code">
+<select name="" id="" select-tab="test::测试tab">
+    <optgroup label="123123">
+        <option value="">ffff</option>
+        <option value="">rrrr</option>
+    </optgroup>
+    <option value="">1111</option>
+    <option value="">2222</option>
+    <option value="" selected>333333</option>
+</select>
+
+<select name="" id="" select-tab="test::测试tab2">
+    <option value="">aaaa</option>
+    <option value="">bbbbb</option>
+    <option value="">cccccc</option>
+</select>
+
+<select name="" id="" select-tab="test::测试tab3">
+    <option value="">xxxxxx</option>
+    <option value="">yyyyyyyyyyyy</option>
+    <option value="">zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz</option>
+</select>                               
+            </div>
+        </div>
+        
+        <h3>国家选择框</h3>
+        <div id="code-3">
+            <div class="ob-code">
+<select select-css="span-9 select-flags">
+    <option value="China" select-countrycode="86" select-css="select-flag select-flag-cn" select-rm-areacode="0" selected="selected">
+            China
+        </option>
+    <option value="Malaysia" select-countrycode="60" select-css="select-flag select-flag-my" select-rm-areacode="0">
+        Malaysia
+        </option>
+    <option value="India" select-countrycode="91" select-css="select-flag select-flag-in" select-rm-areacode="0">
+        India
+    </option>
+</select>
+<hr>
+<select select-css="span-9 select-flags" disabled select-label="disabled test">
+    <option value="China" select-countrycode="86" select-css="select-flag select-flag-cn" select-rm-areacode="0" selected="selected">
+            China
+        </option>
+    <option value="Malaysia" select-countrycode="60" select-css="select-flag select-flag-my" select-rm-areacode="0">
+        Malaysia Malaysia Malaysia Malaysia Malaysia Malaysia Malaysia Malaysia Malaysia Malaysia Malaysia Malaysia Malaysia Malaysia Malaysia Malaysia Malaysia
+    </option>
+    <option value="India" select-countrycode="91" select-css="select-flag select-flag-in" select-rm-areacode="0">
+        India
+    </option>
+</select>
+<hr>
+<select id="comCountry" name="comCountry" select-css="form-inline span-12 select-flags" select-label="Country">
+    <optgroup label="XXX">
+        <option value="Australia" select-countrycode="61" select-css="select-flag select-flag-au" select-rm-areacode="0">
+            Australia
+        </option>
+        <option value="Brazil" select-countrycode="55" select-css="select-flag select-flag-br" select-rm-areacode="0">
+            Brazil
+        </option>
+        <option value="Canada" select-countrycode="1" select-css="select-flag select-flag-ca" select-rm-areacode="0">
+            Canada
+        </option>
+        <option value="China" select-countrycode="86" select-css="select-flag select-flag-cn" select-rm-areacode="0" selected="selected">
+            China
+        </option>
+        <option value="India" select-countrycode="91" select-css="select-flag select-flag-in" select-rm-areacode="0">
+            India
+        </option>
+        <option value="Malaysia" select-countrycode="60" select-css="select-flag select-flag-my" select-rm-areacode="0">
+            Malaysia
+        </option>
+        <option value="Pakistan" select-countrycode="92" select-css="select-flag select-flag-pk" select-rm-areacode="0">
+            Pakistan
+        </option>
+        <option value="Philippines" select-countrycode="63" select-css="select-flag select-flag-ph" select-rm-areacode="0">
+            Philippines
+        </option>
+        <option value="United_Kingdom" select-countrycode="44" select-css="select-flag select-flag-gb" select-rm-areacode="0">
+            United Kingdom
+        </option>
+        <option value="United_States" select-countrycode="1" select-css="select-flag select-flag-us" select-rm-areacode="0">
+            United States
+        </option>
+    </optgroup>
+    <optgroup label="xxxxx (A-Z)">
+        <option value="India" select-countrycode="91" select-css="select-flag select-flag-in" select-rm-areacode="0">
+            India
+        </option>
+        <option value="Malaysia" select-countrycode="60" select-css="select-flag select-flag-my" select-rm-areacode="0">
+            Malaysia
+        </option>
+        <option value="Pakistan" select-countrycode="92" select-css="select-flag select-flag-pk" select-rm-areacode="0">
+            Pakistan
+        </option>
+        <option value="Philippines" select-countrycode="63" select-css="select-flag select-flag-ph" select-rm-areacode="0">
+            Philippines
+        </option>
+        <option value="United_Kingdom" select-countrycode="44" select-css="select-flag select-flag-gb" select-rm-areacode="0">
+            United Kingdom
+        </option>
+        <option value="United_States" select-countrycode="1" select-css="select-flag select-flag-us" select-rm-areacode="0">
+            United States
+        </option>
+    </optgroup>
+</select>
+<hr>
+<select name="" select-css="form-inline span-12 select-flags" select-label="Country" select-tab="country::热门">
+    <optgroup label="YYYYYY">
+        <option value="Australia" select-countrycode="61" select-css="select-flag select-flag-au" select-rm-areacode="0">
+            Australia
+        </option>
+        <option value="Brazil" select-countrycode="55" select-css="select-flag select-flag-br" select-rm-areacode="0">
+            Brazil
+        </option>
+        <option value="Canada" select-countrycode="1" select-css="select-flag select-flag-ca" select-rm-areacode="0">
+            Canada
+        </option>
+        <option value="China" select-countrycode="86" select-css="select-flag select-flag-cn" select-rm-areacode="0" selected="selected">
+            China
+        </option>
+        <option value="India" select-countrycode="91" select-css="select-flag select-flag-in" select-rm-areacode="0">
+            India
+        </option>
+        <option value="Malaysia" select-countrycode="60" select-css="select-flag select-flag-my" select-rm-areacode="0">
+            Malaysia
+        </option>
+        <option value="Pakistan" select-countrycode="92" select-css="select-flag select-flag-pk" select-rm-areacode="0">
+            Pakistan
+        </option>
+        <option value="Philippines" select-countrycode="63" select-css="select-flag select-flag-ph" select-rm-areacode="0">
+            Philippines PhilippinesPhilippines PhilippinesPhilippines PhilippinesPhilippines PhilippinesPhilippines PhilippinesPhilippines Philippines
+        </option>
+        <option value="United_Kingdom" select-countrycode="44" select-css="select-flag select-flag-gb" select-rm-areacode="0">
+            United Kingdom
+        </option>
+        <option value="United_States" select-countrycode="1" select-css="select-flag select-flag-us" select-rm-areacode="0">
+            United States
+        </option>
+    </optgroup>
+    <optgroup label="xxxx">
+        <option value="India" select-countrycode="91" select-css="select-flag select-flag-in" select-rm-areacode="0">
+            India
+        </option>
+        <option value="Malaysia" select-countrycode="60" select-css="select-flag select-flag-my" select-rm-areacode="0">
+            Malaysia
+        </option>
+        <option value="Pakistan" select-countrycode="92" select-css="select-flag select-flag-pk" select-rm-areacode="0">
+            Pakistan
+        </option>
+        <option value="Philippines" select-countrycode="63" select-css="select-flag select-flag-ph" select-rm-areacode="0">
+            Philippines
+        </option>
+        <option value="United_Kingdom" select-countrycode="44" select-css="select-flag select-flag-gb" select-rm-areacode="0">
+            United Kingdom
+        </option>
+        <option value="United_States" select-countrycode="1" select-css="select-flag select-flag-us" select-rm-areacode="0">
+            United States
+        </option>
+    </optgroup>
+</select>
+<select select-tab="country::亚洲">
+    <option value="China" select-countrycode="86" select-css="select-flag select-flag-cn" select-rm-areacode="0" selected="selected">
+            China
+        </option>
+    <option value="Malaysia" select-countrycode="60" select-css="select-flag select-flag-my" select-rm-areacode="0">
+        Malaysia
+    </option>
+    <option value="India" select-countrycode="91" select-css="select-flag select-flag-in" select-rm-areacode="0">
+        India
+    </option>
+    <option value="Pakistan" select-countrycode="92" select-css="select-flag select-flag-pk" select-rm-areacode="0">
+        Pakistan
+    </option>
+    <option value="Philippines" select-countrycode="63" select-css="select-flag select-flag-ph" select-rm-areacode="0">
+        Philippines
+    </option>
+</select>
+            </div>
+        </div>
+
+        <h3>向上选择框</h3>
+        <div id="code-4">
+            <div class="ob-code">
+<select name="" id="" select-css="top span-11" select-label="test label">
+    <option value="">1111</option>
+    <option value="">2222</option>
+    <option value="" selected>333333</option>
+</select>                
             </div>
         </div>
 
 
+        <h3>引用</h3>
+        <div class="sample-block">
+            <div class="highlight J-highlight">
+@import "$${path.common}/obelisk/lib/_select";
+            </div>
+            <div class="highlight J-highlight" ace-mode="ace/mode/html">
+&lt;mstatic:script type="text/javascript" src="/common/js/libs/jquery.js" charset="utf-8"&gt;&lt;/mstatic:script&gt;
+&lt;mstatic:script type="text/javascript" src="/common/js/assets/template/template.js" charset="utf-8"&gt;&lt;/mstatic:script&gt;
+&lt;mstatic:script type="text/javascript" src="/common/js/business/global/util.js" charset="utf-8"&gt;&lt;/mstatic:script&gt;
+&lt;mstatic:script type="text/javascript" src="/common/js/assets/observe/observe.js" charset="utf-8"&gt;&lt;/mstatic:script&gt;
+&lt;mstatic:script type="text/javascript" src="/common/js/assets/select2/select.js" charset="utf-8"&gt;&lt;/mstatic:script&gt;
+            </div>
+            <div class="highlight J-highlight" ace-mode="ace/mode/javascript">
+Select.use('.J-sampleBox select')            
+            </div>
 
+        </div>
 
 
 	</div>
@@ -68,9 +264,9 @@
     
 	<script>
         new Obdemo({
-            items:[{elId:'code-1'},{elId:'code-2'}],
+            items:[{elId:'code-1'},{elId:'code-2'},{elId:'code-3'},{elId:'code-4'}],
             cb: function(){
-                Select.use('.use-select select')
+                Select.use('.J-sampleBox select')
             }
         });
     </script>

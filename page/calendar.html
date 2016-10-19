@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calendar</title>
+    <!--include "_cssImport.html"-->
+    <style>
+        .calendar{
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+
+<!--include "_nav.html"-->
+	
+	<div class="obelisk obelisk-form">
+		<h2>日历 
+            <div class="trigger-all">展开所有代码
+                <div class="input-toggle J-step-2">
+                    <label class="input-wrap">
+                        <input class="J-codeTriggerAll" type="checkbox">
+                        <span class="input-ctnr"></span>
+                    </label>
+                </div>
+            </div>
+        </h2>
+
+        
+
+
+
+		<h3>一个月/按天选择</h3>
+        <div id="code-1">
+            <div class="ob-code">
+<input class="input-text" type="text" placeholder="One Month" id="datepicker-months">
+            </div>
+            <div class="ob-info">
+                <h5 class="sub-title"><span>JS代码</span></h5>
+              
+                <div class="highlight J-highlight" ace-mode="ace/mode/javascript">
+var picker2months = new Pikaday({
+    field: document.getElementById('datepicker-months'),
+    firstDay: 1,
+    i18n : {
+        months        : ['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'],
+        weekdays      : ['星期日','星期一','星期二','星期三','星期四','星期五','星期六'],
+        weekdaysShort : ['日','一','二','三','四','五','六']
+    },
+    minDate: new Date('2000-01-01'),
+    maxDate: new Date('2020-12-31'),
+    format : 'yyyy-mm-dd',
+    onSelect : function(date) {
+        console.log(date)
+    },
+    yearRange: [2000, 2020]
+});
+                </div>
+            </div>
+        </div>
+        <h3>两个月/区间选择</h3>
+        <div id="code-2">
+            <div class="ob-code">
+<input class="input-text" type="text" placeholder="One Month" id="datepicker-2months-right">
+            </div>
+            <div class="ob-info">
+                <h5 class="sub-title"><span>JS代码</span></h5>
+              
+                <div class="highlight J-highlight" ace-mode="ace/mode/javascript">
+var picker3monthsRight = new Pikaday({
+    numberOfMonths: 2,
+    timeRange: true,
+    rangeJoiner : ' - ',
+    mainCalendar: 'right',
+    field: document.getElementById('datepicker-2months-right'),
+    firstDay: 1,
+    minDate: new Date('2010-01-01'),
+    maxDate: new Date('2020-12-31'),
+    yearRange: [2000, 2020],
+    onSelect : function(date) {
+        console.log(date);
+    }
+});
+                </div>
+            </div>
+        </div>
+        <h3>日历</h3>
+        <div id="code-3">
+            <div class="ob-code">
+<div id="datepickerContainer"></div>
+            </div>
+            <div class="ob-info">
+                <h5 class="sub-title"><span>JS代码</span></h5>
+              
+                <div class="highlight J-highlight" ace-mode="ace/mode/javascript">
+var picker3monthsRight = new Pikaday({
+    numberOfMonths: 3,
+    timeRange: true,
+    rangeJoiner : ' - ',
+    mainCalendar: 'right',
+    format : 'yyyy-mm-dd',
+    field: document.getElementById('datepickerContainer'),
+    bound: false,
+    firstDay: 1,
+    minDate: new Date('2000-01-01'),
+    maxDate: new Date('2020-12-31'),
+    yearRange: [2000, 2020],
+    onSelect : function(date) {
+        console.log(date);
+    }
+});
+                </div>
+            </div>
+        </div>
+
+        <h3>引用</h3>
+        <div class="sample-block">
+            <div class="highlight J-highlight">
+@import "$${path.common}/obelisk/module/_tour";
+            </div>
+            <div class="highlight J-highlight" ace-mode="ace/mode/html">
+&lt;mstatic:script type="text/javascript" src="/common/js/assets/pikaDay/pikaday.2.0.0.js" charset="utf-8"&gt;&lt;/mstatic:script&gt;
+            </div>
+            <div class="tips">Document: <a target="_blank" href="https://github.com/dbushell/Pikaday">https://github.com/dbushell/Pikaday</a></div>  
+        </div>
+
+	</div>
+
+
+
+
+    <script src="src/js/asset/ace/ace.js"></script>
+    <script src="src/js/asset/ace/ext-static_highlight.js"></script>
+    <!--<script src="src/js/asset/ace/ext-beautify.js"></script>-->
+    <script src="src/js/asset/clipboard/clipboard.min.js"></script>
+    
+    <script src="http://www.micstatic.com/gb/js/assets/pikaDay/pikaday.2.0.0.js"></script>
+    <!--<script src="src/js/tour.js"></script>-->
+    <script src="src/js/code.js"></script>
+    
+	<script>
+
+
+
+        new Obdemo({
+            items:[{elId:'code-1'},{elId:'code-2'},{elId:'code-3'}],
+            cb: todo,
+            });
+        function todo(){
+            var picker2months = new Pikaday({
+                field: document.getElementById('datepicker-months'),
+                firstDay: 1,
+                i18n : {
+                    months        : ['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'],
+                    weekdays      : ['星期日','星期一','星期二','星期三','星期四','星期五','星期六'],
+                    weekdaysShort : ['日','一','二','三','四','五','六']
+                },
+                minDate: new Date('2000-01-01'),
+                maxDate: new Date('2020-12-31'),
+                format : 'yyyy-mm-dd',
+                onSelect : function(date) {
+                    console.log(date)
+                },
+                yearRange: [2000, 2020]
+            });
+
+            var picker3monthsRight = new Pikaday({
+                numberOfMonths: 2,
+                timeRange: true,
+                rangeJoiner : ' - ',
+                mainCalendar: 'right',
+                field: document.getElementById('datepicker-2months-right'),
+                firstDay: 1,
+                minDate: new Date('2010-01-01'),
+                maxDate: new Date('2020-12-31'),
+                yearRange: [2000, 2020],
+                onSelect : function(date) {
+                    console.log(date);
+                }
+            });
+
+
+            var picker3monthsRight = new Pikaday({
+                numberOfMonths: 3,
+                timeRange: true,
+                rangeJoiner : ' - ',
+                mainCalendar: 'right',
+                format : 'yyyy-mm-dd',
+                field: document.getElementById('datepickerContainer'),
+                bound: false,
+                firstDay: 1,
+                minDate: new Date('2000-01-01'),
+                maxDate: new Date('2020-12-31'),
+                yearRange: [2000, 2020],
+                onSelect : function(date) {
+                    console.log(date);
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
